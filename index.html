@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Ghid Tenerife</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#EDF3F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B171C" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenerife">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme="light"]{
+  --ink:#10222B; --ink2:#3A4F59; --ink3:#6C8089;
+  --paper:#EDF3F5; --surf:#FFFFFF; --surf2:#DFEAEE;
+  --line:#CDDDE2; --line2:#B2C7CE;
+  --a1:#14607A; --a1bg:#DCEDF3;
+  --a2:#1F7F73; --a2bg:#DCF0EC;
+  --a3:#8A6218; --a3bg:#F5EBD6;
+  --a4:#8C3B3B; --a4bg:#F6E0E0;
+  --sea:#3E7A8C; --land:#DCE6E4; --landln:#A9C0C4;
+  --sh:0 1px 2px rgba(16,34,43,.05);
+}
+[data-theme="dark"]{
+  --ink:#E6EFF2; --ink2:#A8BCC4; --ink3:#7E9099;
+  --paper:#0B171C; --surf:#142229; --surf2:#1C2E36;
+  --line:#2A404A; --line2:#3B5764;
+  --a1:#63B6D4; --a1bg:#0F2C38;
+  --a2:#5FBCAC; --a2bg:#0E2F2B;
+  --a3:#D9AC5A; --a3bg:#332710;
+  --a4:#D97E7E; --a4bg:#361B1B;
+  --sea:#153039; --land:#1E333B; --landln:#3E5A64;
+  --sh:0 1px 2px rgba(0,0,0,.3);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#E6EFF2; --ink2:#A8BCC4; --ink3:#7E9099;
+  --paper:#0B171C; --surf:#142229; --surf2:#1C2E36;
+  --line:#2A404A; --line2:#3B5764;
+  --a1:#63B6D4; --a1bg:#0F2C38;
+  --a2:#5FBCAC; --a2bg:#0E2F2B;
+  --a3:#D9AC5A; --a3bg:#332710;
+  --a4:#D97E7E; --a4bg:#361B1B;
+  --sea:#153039; --land:#1E333B; --landln:#3E5A64;
+  --sh:0 1px 2px rgba(0,0,0,.3);
+}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.75;
+  padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque","Inter",sans-serif;font-weight:800;
+  letter-spacing:-.02em;line-height:1.16;margin:0;color:var(--ink)}
+h1{font-size:1.5em}h2{font-size:1.16em}h3{font-size:1.02em;font-weight:600}
+p{margin:0 0 .8em}
+a{color:var(--a1);text-underline-offset:3px}
+button{font-family:inherit;font-size:inherit;color:var(--ink);border:0;background:none;padding:0;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--a1);outline-offset:2px;border-radius:6px}
+.wrap{max-width:580px;margin:0 auto;padding:0 16px}
+
+header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:9px;height:58px}
+.hbar .ttl{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;
+  letter-spacing:-.02em;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbar .sub{font-size:12px;color:var(--ink3);font-weight:400;font-family:"Inter",sans-serif;
+  letter-spacing:0;margin-left:8px}
+.ibtn{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  border:1px solid var(--line);background:var(--surf);flex:none}
+.ibtn svg{width:20px;height:20px;stroke:var(--ink2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.shead{display:flex;align-items:baseline;gap:10px;margin:30px 0 13px}
+.shead h2{flex:none}.shead .rule{flex:1;height:1px;background:var(--line)}
+.shead .cnt{font-size:.68em;color:var(--ink3);flex:none}
+
+/* zile */
+.days{display:flex;flex-direction:column;gap:13px}
+.dayb{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:18px;
+  text-align:left;width:100%;box-shadow:var(--sh);display:block}
+.dayb.has{border-color:var(--a2);border-width:1.5px}
+.dayb .dh{display:flex;align-items:baseline;gap:9px}
+.dayb .dn{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.05em;flex:1}
+.dayb .dt{font-size:.72em;color:var(--ink3)}
+.dayb .dl{margin-top:9px;display:flex;flex-direction:column;gap:5px}
+.dayb .di{font-size:.83em;color:var(--ink2);display:flex;gap:8px;align-items:baseline}
+.dayb .di .bl{width:6px;height:6px;border-radius:50%;background:var(--a2);flex:none;transform:translateY(-2px)}
+.dayb .de{margin-top:8px;font-size:.83em;color:var(--ink3)}
+.dateinp{width:100%;margin-top:13px;padding:11px 13px;border-radius:11px;border:1px solid var(--line);
+  background:var(--surf);color:var(--ink);font-family:inherit;font-size:.85em}
+
+/* carduri */
+.cards{display:flex;flex-direction:column;gap:13px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  position:relative;box-shadow:var(--sh)}
+.card.done{opacity:.5}
+.card .hit{display:block;width:100%;text-align:left}
+.bn{height:84px;display:block;width:100%;object-fit:cover}
+.card .cb{padding:18px}
+.card .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1.02em;
+  line-height:1.25;display:block;padding-right:34px}
+.card .bl2{font-size:.83em;color:var(--ink2);margin-top:7px;line-height:1.5;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{font-size:.68em;padding:4px 10px;border-radius:100px;background:var(--surf2);
+  color:var(--ink2);border:1px solid var(--line);white-space:nowrap}
+.tag.car{background:var(--a3bg);color:var(--a3);border-color:transparent}
+.tag.nocar{background:var(--a2bg);color:var(--a2);border-color:transparent}
+.tag.idl{background:var(--a1bg);color:var(--a1);border-color:transparent;font-weight:600}
+.donechk{position:absolute;top:94px;right:13px;width:32px;height:32px;border-radius:10px;
+  border:1px solid var(--line);background:var(--surf);display:grid;place-items:center;z-index:2}
+.donechk svg{width:16px;height:16px;stroke:var(--ink3);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.card.done .donechk{background:var(--a2);border-color:var(--a2)}
+.card.done .donechk svg{stroke:var(--paper)}
+
+/* buton adauga/scoate din zi */
+.addb{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;
+  border-radius:12px;background:var(--a1bg);color:var(--a1);font-weight:600;font-size:.85em;
+  border:1px solid transparent;margin-top:13px}
+.addb.on{background:var(--a2bg);color:var(--a2)}
+.addb svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.cat{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:18px;
+  text-align:left;display:flex;flex-direction:column;gap:12px;min-height:128px;box-shadow:var(--sh)}
+.cat .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none}
+.cat .ic svg{width:22px;height:22px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cat .nm{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:.88em;line-height:1.25}
+.cat .ct{display:block;font-size:.7em;color:var(--ink3);margin-top:4px}
+.ic-nature{background:var(--a2bg)}.ic-nature svg{stroke:var(--a2)}
+.ic-beach{background:var(--a1bg)}.ic-beach svg{stroke:var(--a1)}
+.ic-town{background:var(--a3bg)}.ic-town svg{stroke:var(--a3)}
+.ic-sea{background:var(--a1bg)}.ic-sea svg{stroke:var(--a1)}
+.ic-lava{background:var(--a4bg)}.ic-lava svg{stroke:var(--a4)}
+.ic-prac{background:var(--surf2)}.ic-prac svg{stroke:var(--ink2)}
+
+.rows{background:var(--surf);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--sh)}
+.row{display:flex;align-items:center;gap:12px;padding:16px 18px;width:100%;text-align:left;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .em{font-size:1.05em;flex:none;width:24px;text-align:center}
+.row .tx{flex:1;min-width:0}
+.row .tx .t{font-weight:500;font-size:.88em}
+.row .tx .d{font-size:.72em;color:var(--ink3);line-height:1.4;margin-top:2px}
+.row .ch{width:8px;height:8px;border-right:2px solid var(--ink3);border-bottom:2px solid var(--ink3);
+  transform:rotate(-45deg);flex:none;margin-right:3px}
+
+.hero{padding:16px 0 4px}
+.hero h1{margin-bottom:11px}
+.hero .lede{font-size:.9em;color:var(--ink2);line-height:1.65}
+.herobn{width:100%;height:150px;border-radius:16px;overflow:hidden;margin:6px 0 15px;border:1px solid var(--line)}
+.herobn{position:relative}
+.herobn img,.herobn svg{width:100%;height:100%;object-fit:cover;display:block}
+.photobtn{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:7px;
+  padding:9px 13px;border-radius:100px;background:rgba(0,0,0,.55);color:#fff;
+  font-size:12.5px;font-weight:600;backdrop-filter:blur(6px);border:0}
+.photobtn svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.sec{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:20px;
+  margin-bottom:13px;box-shadow:var(--sh)}
+.sec>h3{margin-bottom:12px}
+.sec p:last-child,.sec ul:last-child{margin-bottom:0}
+.sec ul{margin:0 0 .7em;padding-left:20px}
+.sec li{margin-bottom:7px;font-size:.9em;line-height:1.6}
+.sec li:last-child{margin-bottom:0}
+.sec b{font-weight:600}
+
+.tl{list-style:none;margin:0;padding:0}
+.tl>li{display:flex;gap:13px;padding:0 0 19px;position:relative}
+.tl>li:last-child{padding-bottom:0}
+.tl>li::before{content:"";position:absolute;left:6px;top:19px;bottom:-2px;width:1.5px;background:var(--line)}
+.tl>li:last-child::before{display:none}
+.tl .dot{width:14px;height:14px;border-radius:50%;border:3px solid var(--a2);background:var(--surf);
+  flex:none;margin-top:5px;z-index:1}
+.tl .bd{flex:1;min-width:0}
+.tl .hr{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:.75em;color:var(--a2)}
+.tl .ti{font-weight:600;font-size:.92em;margin:2px 0 4px}
+.tl .tt{font-size:.85em;color:var(--ink2);line-height:1.6}
+.tl .tt ul{margin:6px 0 0;padding-left:19px}
+.tl .tt li{margin-bottom:5px;font-size:1em;display:list-item;padding:0;position:static;color:var(--ink2)}
+
+.fld{width:100%;padding:14px 15px;border-radius:12px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink);font-family:inherit;font-size:.88em;line-height:1.5}
+.fld:focus{border-color:var(--a1);outline:none}
+.fld.ta{resize:vertical;min-height:64px}
+.hint{font-size:.72em;color:var(--ink3);margin-top:9px;line-height:1.5}
+.hint code{background:var(--surf2);padding:2px 6px;border-radius:5px;font-size:.95em}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:.78em;padding:9px 14px;border-radius:100px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink2);font-weight:500}
+.chip.on{background:var(--a1);border-color:var(--a1);color:var(--paper);font-weight:600}
+.gt{border-bottom:1.5px dotted var(--a1);color:var(--a1);cursor:pointer;font-weight:500}
+.sheet{position:fixed;inset:0;z-index:90;display:none}
+.sheet.on{display:block}
+.sheet .bg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.sheet .pan{position:absolute;left:0;right:0;bottom:0;background:var(--surf);
+  border-radius:20px 20px 0 0;padding:22px 20px calc(26px + env(safe-area-inset-bottom,0px));
+  max-height:72vh;overflow-y:auto;border-top:1px solid var(--line);
+  max-width:580px;margin:0 auto}
+.sheet .gr{width:38px;height:4px;border-radius:2px;background:var(--line2);margin:0 auto 16px}
+.sheet h3{margin-bottom:10px}
+.sheet .gd{font-size:.86em;color:var(--ink2);line-height:1.65}
+.note{border-radius:12px;padding:14px 16px;font-size:.85em;line-height:1.6;margin:12px 0}
+.note:last-child{margin-bottom:0}
+.note.tip{background:var(--a2bg)}.note.warn{background:var(--a4bg)}
+.note b{font-weight:600}.note.tip b{color:var(--a2)}.note.warn b{color:var(--a4)}
+
+.combo{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);
+  width:100%;text-align:left}
+.combo:last-child{border-bottom:0;padding-bottom:0}
+.combo .pl{width:8px;height:8px;border-radius:50%;background:var(--a3);flex:none;margin-top:9px}
+.combo .ct2{flex:1;font-size:.85em;color:var(--ink2);line-height:1.55}
+.combo b{color:var(--ink);font-weight:600}
+.combo .ch{width:7px;height:7px;border-right:2px solid var(--ink3);border-bottom:2px solid var(--ink3);
+  transform:rotate(-45deg);flex:none;margin-top:10px}
+
+.tblw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl{width:100%;border-collapse:collapse;font-size:.82em}
+.tbl th{text-align:left;font-weight:600;font-size:.85em;color:var(--ink3);padding:8px 14px 8px 3px;
+  border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl td{padding:11px 14px 11px 3px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.tbl tr:last-child td{border-bottom:0}
+
+.ck{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);
+  width:100%;text-align:left}
+.ck:last-child{border-bottom:0}
+.ck .bx{width:23px;height:23px;border-radius:7px;border:1.8px solid var(--line2);background:var(--surf2);
+  flex:none;margin-top:2px;display:grid;place-items:center}
+.ck .bx svg{width:13px;height:13px;stroke:var(--paper);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.ck[aria-pressed="true"] .bx{background:var(--a2);border-color:var(--a2)}
+.ck[aria-pressed="true"] .bx svg{opacity:1}
+.ck[aria-pressed="true"] .lb{color:var(--ink3);text-decoration:line-through}
+.ck .lb{font-size:.85em;line-height:1.55;flex:1}
+.prog{font-size:.72em;color:var(--ink3);margin-bottom:11px}
+
+.mapbox{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:13px;box-shadow:var(--sh)}
+.mapbox .vp{overflow:hidden;border-radius:10px;touch-action:none}
+.mapbox svg{width:100%;height:auto;display:block;transform-origin:0 0}
+.zoomrow{display:flex;gap:8px;margin-top:11px;align-items:center}
+.zoomrow button{flex:1;padding:9px;border-radius:10px;border:1px solid var(--line);
+  background:var(--surf2);color:var(--ink2);font-size:.8em;font-weight:600}
+.zoomrow .lvl{flex:none;min-width:44px;text-align:center;font-size:.72em;color:var(--ink3)}
+circle.h{fill:var(--a2);stroke:var(--paper);stroke-width:2.5}
+circle.h.sel{fill:var(--a4)}
+.pin text{font-family:"Inter",sans-serif;font-size:7.5px;font-weight:600;fill:var(--ink);
+  paint-order:stroke;stroke:var(--paper);stroke-width:2.8;stroke-linejoin:round}
+.maplg{font-size:.72em;color:var(--ink3);margin-top:11px;text-align:center}
+.maplink{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;
+  border-radius:12px;background:var(--a1bg);color:var(--a1);font-weight:600;font-size:.85em;
+  text-decoration:none;border:1px solid transparent}
+.maplink svg{width:18px;height:18px;stroke:var(--a1);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+.lk{display:flex;align-items:center;gap:12px;padding:15px 18px;width:100%;text-align:left;
+  border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.lk:last-child{border-bottom:0}
+.lk .em{font-size:1em;width:24px;text-align:center;flex:none}
+.lk .tx{flex:1;min-width:0}
+.lk .t{font-weight:500;font-size:.88em}
+.lk .d{font-size:.72em;color:var(--ink3);margin-top:2px;line-height:1.4}
+.lk .ext{width:16px;height:16px;stroke:var(--ink3);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.srch{position:relative;margin:16px 0 4px}
+.srch input{width:100%;height:50px;border-radius:14px;border:1px solid var(--line);background:var(--surf);
+  padding:0 15px 0 44px;font-size:.9em;font-family:inherit;color:var(--ink)}
+.srch input::placeholder{color:var(--ink3)}
+.srch svg{position:absolute;left:15px;top:15px;width:19px;height:19px;stroke:var(--ink3);fill:none;stroke-width:1.9;stroke-linecap:round}
+.hit2{padding:14px 0;border-bottom:1px solid var(--line);width:100%;text-align:left;display:block}
+.hit2 .w{font-size:.68em;color:var(--ink3);margin-bottom:3px}
+.hit2 .h{font-weight:500;font-size:.88em}
+.hit2 .s{font-size:.78em;color:var(--ink2);margin-top:3px;line-height:1.5}
+.hit2 mark{background:var(--a3bg);color:var(--a3);padding:0 2px;border-radius:3px}
+
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surf);
+  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabsin{max-width:580px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.tab{padding:11px 2px 12px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.tab svg{width:22px;height:22px;stroke:var(--ink3);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tab .lb{font-size:10px;color:var(--ink3);font-weight:500}
+.tab[aria-selected="true"] svg{stroke:var(--a1)}
+.tab[aria-selected="true"] .lb{color:var(--a1);font-weight:600}
+
+.backbar{position:sticky;top:58px;z-index:35;background:var(--paper);margin:0 -16px;padding:0 16px;
+  border-bottom:1px solid var(--line)}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:.82em;color:var(--ink2);
+  padding:13px 12px 13px 0;font-weight:500}
+.back .ar{width:8px;height:8px;border-left:2px solid var(--ink2);border-bottom:2px solid var(--ink2);transform:rotate(45deg)}
+.empty{text-align:center;padding:46px 20px;color:var(--ink3);font-size:.85em;line-height:1.7}
+.foot{text-align:center;padding:28px 0 10px;font-size:.72em;color:var(--ink3);line-height:1.6}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hbar">
+    <div class="ttl" id="hTitle">Tenerife<span class="sub" id="hSub"></span></div>
+    <button class="ibtn" id="btnTheme" aria-label="Schimbă tema"><svg id="themeIcon" viewBox="0 0 24 24"></svg></button>
+    <button class="ibtn" id="btnSearch" aria-label="Caută">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shT">
+  <div class="bg" data-closesheet></div>
+  <div class="pan"><div class="gr"></div>
+    <h3 id="shT"></h3><div class="gd" id="shD"></div></div>
+</div>
+<input type="file" id="photoIn" accept="image/*" hidden>
+<input type="file" id="importIn" accept="application/json,.json" hidden>
+
+<nav class="tabs" role="tablist">
+  <div class="tabsin">
+    <button class="tab" role="tab" data-tab="plan" aria-selected="true">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      <span class="lb">Zile</span></button>
+    <button class="tab" role="tab" data-tab="explore" aria-selected="false">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+      <span class="lb">Explorează</span></button>
+    <button class="tab" role="tab" data-tab="map" aria-selected="false">
+      <svg viewBox="0 0 24 24"><path d="M9 3L3 5.5v15L9 18l6 3 6-2.5v-15L15 6z"/><path d="M9 3v15M15 6v15"/></svg>
+      <span class="lb">Hartă</span></button>
+    <button class="tab" role="tab" data-tab="links" aria-selected="false">
+      <svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 5.7.3l3-3A4 4 0 0 0 13 4.7l-1.6 1.6"/><path d="M14 11a4 4 0 0 0-5.7-.3l-3 3A4 4 0 0 0 11 19.3l1.6-1.6"/></svg>
+      <span class="lb">Linkuri</span></button>
+    <button class="tab" role="tab" data-tab="search" aria-selected="false">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <span class="lb">Caută</span></button>
+  </div>
+</nav>
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   DATELE GHIDULUI
+   Pentru altă destinație: înlocuiește tot obiectul GUIDE de mai jos.
+   Structura rămâne identică, codul de sub el nu se atinge.
+   ═══════════════════════════════════════════════════════════════ */
+
+const GUIDE = {
+  destination: "Tenerife",
+  subtitle: "Puerto de la Cruz",
+
+  /* Stările de cer. id-urile se folosesc în `fit` la fiecare bloc. */
+  sky: [
+    { id:"sun",    label:"Senin",       glyph:'<circle cx="16" cy="16" r="6.5" fill="#A9760C"/><g stroke="#A9760C" stroke-width="2.2" stroke-linecap="round"><path d="M16 2v3.5M16 26.5V30M2 16h3.5M26.5 16H30M6.2 6.2l2.5 2.5M23.3 23.3l2.5 2.5M25.8 6.2l-2.5 2.5M8.7 23.3l-2.5 2.5"/></g>' },
+    { id:"partly", label:"Parțial",     glyph:'<circle cx="12" cy="12" r="5" fill="#A9760C"/><g stroke="#A9760C" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M2 12h2.5M4.9 4.9l1.8 1.8M19.1 4.9l-1.8 1.8"/></g><path d="M10 26a5 5 0 0 1 .6-9.96 6.5 6.5 0 0 1 12.3 1.6A4.4 4.4 0 0 1 22.5 26z" fill="#8C96A0"/>' },
+    { id:"cloud",  label:"Înnorat",     glyph:'<path d="M9 25a5.6 5.6 0 0 1 .7-11.2 7.3 7.3 0 0 1 13.8 1.8A4.9 4.9 0 0 1 22.8 25z" fill="#7C837A"/>' },
+    { id:"rain",   label:"Ploaie",      glyph:'<path d="M9 19a5.2 5.2 0 0 1 .6-10.4 6.8 6.8 0 0 1 12.9 1.7A4.6 4.6 0 0 1 22 19z" fill="#7C837A"/><g stroke="#1D4E5F" stroke-width="2.2" stroke-linecap="round"><path d="M11 23l-1.5 5M17 23l-1.5 5M23 23l-1.5 5"/></g>' }
+  ],
+
+
+  /* Categoriile de pe ecranul Explorează. `icon` e numele unei pictograme din ICONS. */
+  cats: [
+    { id:"nature", name:"Natură și munte", icon:"mountain",  cls:"nature" },
+    { id:"beach",  name:"Plaje",           icon:"wave",      cls:"beach"  },
+    { id:"town",   name:"Orașe și sate",   icon:"town",      cls:"town"   },
+    { id:"sea",    name:"Pe mare",         icon:"boat",      cls:"sea"    }
+  ],
+
+  /* fit: 3 = ideal, 2 = merge, 1 = nu e momentul */
+  blocks: [
+    {
+      combos:[
+        {id:"teresitas", why:"plaja e la poalele masivului Anaga — traseu dimineața, baie după-amiaza"}
+      ],
+      weather:[
+        {k:"good", t:"Merge și pe ceață — pădurea de laur trăiește din umezeală, iar ceața printre copaci e chiar imaginea pentru care vii aici."},
+        {k:"bad", t:"Evită după ploi puternice: poteca devine noroioasă și alunecoasă, iar serpentinele spre Benijo se fac neplăcute."}
+      ],
+      permit:{"need": true, "name": "Depinde de traseu", "what": "Traseele obișnuite din Anaga (Cruz del Carmen, Sendero de los Sentidos, Chinamada) <b>nu au nevoie de permis</b>.<br>Două trasee sunt însă restricționate:<ul><li><b>Sendero Circular La Ensillada – Cabezo de Tejo</b> (Rezervația Naturală Integrală El Pijaral)</li><li><b>Sendero La Asomada – Cruz de Afur</b> (Zona Monte Aguirre)</li></ul>", "how": "Tot prin <b>Tenerife ON</b>, tenerifeon.es, de pe fișa traseului respectiv.", "when": "Numărul de locuri pe zi e mic. Rezervă din timp dacă îți dorești unul dintre ele.", "cost": "", "extra": "Dacă nu vrei complicații, traseele libere din Anaga sunt deja foarte bune."},
+      id:"anaga", short:"Anaga", cat:"nature", coord:"28.5309,-16.2799", mapq:"Parque Rural de Anaga", scene:"forest", name:"Anaga — pădure de laur + Benijo",
+      blurb:"Pădure subtropicală în ceață, apoi plajă sălbatică cu nisip negru. Cea mai verde zi de pe insulă.",
+      car:true, dur:"Zi întreagă", hours:"08:00–19:00",
+      fit:{sun:3,partly:3,cloud:3,rain:1},
+      lede:"Laurisilva — un ecosistem care exista în Europa înainte de glaciațiuni și a supraviețuit doar aici și în Madeira. Ceața nu strică ziua, o face.",
+      timeline:[
+        {hr:"08:00", ti:"Plecare din Puerto de la Cruz", tx:"TF-5 spre est, ieșire spre La Laguna, apoi TF-12. Circa 1h15 până la centrul de vizitare Cruz del Carmen."},
+        {hr:"09:15", ti:"Cruz del Carmen", tx:"Parcare gratuită dar mică — de asta contează plecarea devreme. Hărți fizice gratuite, toaletă, cafea înainte de start."},
+        {hr:"09:45", ti:"Traseu prin pădure", tx:"Trei variante:<ul><li><b>Ușor</b> — Sendero de los Sentidos (0,5–1,5 km, 30–45 min), chiar de la centru</li><li><b>Mediu</b> — Cruz del Carmen → Chinamada (10 km dus-întors, ~4h), sat cu case săpate în stâncă</li><li><b>Cel mai frumos</b> — Cruz del Carmen → Punta del Hidalgo (~12 km, 4–5h, doar coborâre). Sens unic, te întorci cu autobuzul 105.</li></ul>"},
+        {hr:"13:00", ti:"Prânz la Casa Carlos sau Bar Cruz del Carmen", tx:"Localuri rustice, mâncare canariană simplă: potaje, carne de cabra, queso asado. 12–18 €. Ai cash la tine."},
+        {hr:"14:30", ti:"Coborâre spre coastă (Taganana → Benijo)", tx:"TF-12 → TF-134, în serpentine strânse. Oprire obligatorie la <b>Mirador Pico del Inglés</b> — panoramă peste toată creasta."},
+        {hr:"15:30", ti:"Playa de Benijo", tx:"Nisip vulcanic negru, faleze, stâncile Roques de Anaga în larg. Coborârea pe scări, ~10 min printre restaurante."},
+        {hr:"18:00", ti:"Apus și întoarcere", tx:"Rămâi la apus dacă poți. Întoarcere ~1h30."}
+      ],
+      notes:[
+        {k:"tip", t:"Descarcă harta offline înainte de plecare. În Anaga nu ai semnal aproape nicăieri."},
+        {k:"tip", t:"Restaurantele de deasupra plajei (Casa África, El Mirador) au vedere directă și pește prins local. Cel mai bun loc de apus de pe insulă."},
+        {k:"warn", t:"Benijo are valuri puternice și nu are salvamar. Bun pentru intrat până la genunchi, nu pentru înot lung."},
+        {k:"warn", t:"Drumul de întoarcere pe întuneric prin Anaga e solicitant. Dacă nu te simți confortabil, pleacă înainte de apus."}
+      ]
+    },
+    {
+      combos:[
+        {id:"stargazing", why:"rămâi sus până seara și nu mai faci drumul de două ori"},
+        {id:"orotava", why:"La Orotava e pe același drum, la coborâre; adaugi două ore"}
+      ],
+      weather:[
+        {k:"good", t:"Cere cer senin, dar verifică sus, nu jos — de multe ori Puerto e sub nori și la 2.000 m e soare."},
+        {k:"bad", t:"Renunță la vânt peste 40 km/h: telecabina se închide și rămâi cu drumul făcut degeaba."}
+      ],
+      permit:{"need": true, "name": "Sendero PNT 10 „Telesforo Bravo\"", "what": "Necesar <b>doar pentru ultimii 163 m</b>, de la stația telecabinei (La Rambleta, 3.555 m) până în vârf. Restul parcului și toate celelalte trasee sunt libere.", "how": "Se rezervă de pe <b>fișa traseului</b> pe tenerifeon.es, nu din secțiunea generală de permise. Ai nevoie de cont cu utilizator și parolă.", "when": "Cu <b>maximum 56 de zile înainte</b>. În fiecare luni la 07:00 ora Canarelor se deschid locuri noi.", "cost": "Rezervarea e supusă unor <b>tarife publice</b> — verifică suma pe fișa traseului.", "extra": "Intervalul orar rezervat acoperă <b>și intrarea, și ieșirea</b> — toată vizita trebuie să încapă în el. Se verifică actul de identitate."},
+      id:"teide", short:"Teide", cat:"nature", coord:"28.2724,-16.6425", mapq:"Teleférico del Teide", scene:"volcano", name:"Teide — peisaj vulcanic",
+      blurb:"Cel mai înalt vârf din Spania. Peisajul de la 2.000 m în sus nu seamănă cu nimic din Europa.",
+      car:true, dur:"Zi întreagă", hours:"08:30–18:00",
+      fit:{sun:3,partly:3,cloud:2,rain:1},
+      lede:"Dacă Puerto e sub nori, aici e probabil soare. Urci prin stratul de nori și ieși deasupra — „marea de nori\" e chiar mai frumoasă decât cerul senin.",
+      timeline:[
+        {hr:"Înainte", ti:"Verifică vremea", tx:"aemet.es, secțiunea Parque Nacional del Teide. Plus webcam live (caută „webcam Teide Parador\"). Dacă e ceață sau vânt peste 40 km/h, telecabina nu funcționează."},
+        {hr:"08:30", ti:"Plecare", tx:"TF-5 → TF-21 prin La Orotava și pădurea de pini. ~1h10 până la telecabină."},
+        {hr:"09:30", ti:"Mirador de Chipeque", tx:"La ~1.700 m, pe traseu. Dimineața devreme vezi marea de nori cu Teide deasupra. 15 minute, dar e una din cele mai bune poze din vacanță."},
+        {hr:"10:30", ti:"Telecabină + La Rambleta", tx:"De la 2.356 m la 3.555 m în 8 minute. ~40 € dus-întors, se rezervă online. Sus: trei poteci scurte de belvedere."},
+        {hr:"13:30", ti:"Traseu la bază", tx:"<ul><li><b>Roques de García</b> (3,5 km circular, 1h30) — formațiunile stâncoase, inclusiv Roque Cinchado de pe vechea bancnotă de 1000 pesetas</li><li><b>Mirador de la Ruleta</b> (200 m) — dacă nu vrei drumeție</li></ul>"},
+        {hr:"15:30", ti:"Prânz", tx:"Parador de las Cañadas e singurul restaurant din parc (~25–30 €). Alternativă mai bună: sandvișuri luate de jos, mâncate la o zonă de picnic cu priveliște."},
+        {hr:"16:30", ti:"Coborâre", tx:"Aceeași cale (~1h10), sau ocol prin Vilaflor și sud (~2h) — treci prin cel mai înalt sat din Spania."}
+      ],
+      notes:[
+        {k:"warn", t:"Fără permis NU poți urca ultimii 163 m până la vârf. Vezi pagina Rezervări."},
+        {k:"warn", t:"Ia hanorac gros și pantaloni lungi. Sus sunt 5–10°C chiar în octombrie, plus vânt."},
+        {k:"tip", t:"La 3.500 m aerul e rarefiat. Mergi încet. Dacă simți amețeală sau durere de cap, coboară."},
+        {k:"tip", t:"Parcul e rezervă Starlight — printre cele mai bune locuri din Europa pentru observat stele. Excursii cu telescop seara, ~50–60 €."}
+      ]
+    },
+    {
+      combos:[
+        {id:"bollullo", why:"plaja e la 45 de minute pe jos din oraș"},
+        {id:"rambla", why:"amândouă fără mașină, la 20 de minute de bază"}
+      ],
+      weather:[
+        {k:"good", t:"Merge în orice vreme — Loro Parque are secțiuni acoperite, centrul vechi se plimbă și pe înnorat."},
+        {k:"bad", t:"Pe ploaie serioasă, spectacolele în aer liber de la Loro Parque se pot anula."}
+      ],
+      id:"puerto", short:"Puerto de la Cruz", cat:"town", coord:"28.4128,-16.5443", mapq:"Puerto de la Cruz", scene:"town", name:"Puerto de la Cruz + Loro Parque",
+      blurb:"Ziua fără mașină. Totul se face pe jos din centrul orașului.",
+      car:false, dur:"Zi întreagă", hours:"09:00–22:00",
+      fit:{sun:2,partly:3,cloud:3,rain:2},
+      lede:"Loro Parque are secțiuni acoperite, iar centrul vechi merge în orice vreme. Bun de rezervă pentru o zi nesigură.",
+      timeline:[
+        {hr:"09:15", ti:"Loro Parque", tx:"25 min pe jos pe promenadă, sau trenulețul gratuit din Plaza Reyes Católicos. ~40 €, mai ieftin online. Program 9:30–17:30.<ul><li>Colecția de papagali — cea mai mare din lume</li><li>Pinguinariul, cu zăpadă</li><li>Acvariul cu tunel subacvatic</li><li>Spectacole cu delfini, lei de mare, papagali — verifică orarul la intrare</li></ul>"},
+        {hr:"15:00", ti:"Prânz în centrul vechi", tx:"Zona Plaza del Charco — terase la umbra ficușilor uriași."},
+        {hr:"16:15", ti:"Centrul vechi pe jos", tx:"Toate la 5 minute unele de altele:<ul><li>Plaza del Charco — inima orașului</li><li>Casa de la Aduana — cea mai veche clădire (1620), acum centru de artizanat</li><li>Castillo San Felipe — fortăreață din secolul XVII</li><li>Puerto Pesquero — portul vechi cu bărci colorate</li></ul>"},
+        {hr:"18:00", ti:"Lago Martiánez sau Playa Jardín", tx:"<b>Lago Martiánez</b> — piscine cu apă de mare proiectate de César Manrique, ~5,50 €.<br><b>Playa Jardín</b> — nisip negru, grădini tropicale, salvamar. Gratuită. Bună pentru înot relaxat."},
+        {hr:"20:30", ti:"Seara", tx:"Plaza del Charco și străzile din jur se animă după 20:00. Atmosferă locală, nu de resort."}
+      ],
+      notes:[
+        {k:"tip", t:"Intră la Loro Parque la deschidere. După ora 11 se umple de grupuri organizate din sud."},
+        {k:"tip", t:"Playa Jardín la apus, cu Teide vizibil în spate pe zi senină — cea mai bună poză fără efort."}
+      ]
+    },
+    {
+      combos:[
+        {id:"puerto", why:"te întorci în oraș pentru seară"},
+        {id:"rambla", why:"amândouă pe coasta de lângă bază, fără mașină"},
+        {id:"orotava", why:"dimineața plajă, după-amiaza orașul colonial"}
+      ],
+      weather:[
+        {k:"good", t:"Cere soare: plaja e sub faleze și fără soare devine rece și umbroasă chiar la prânz."},
+        {k:"bad", t:"Evită când marea e agitată — nu are salvamar, iar curenții de retur sunt reali."}
+      ],
+      id:"bollullo", short:"Bollullo", cat:"beach", coord:"28.4175,-16.5201", mapq:"Playa del Bollullo", scene:"coast", name:"Plaje sălbatice — Bollullo & Los Patos",
+      blurb:"Neamenajate, cu plantații de banane în spate. Se ajunge pe jos din oraș.",
+      car:false, dur:"Jumătate de zi", hours:"10:00–17:00",
+      fit:{sun:3,partly:2,cloud:1,rain:1},
+      lede:"Nisip vulcanic negru, faleze roșiatice, fără șezlonguri și fără mulțime. Drumul trece prin plantații de banane — parte din farmec.",
+      timeline:[
+        {hr:"10:00", ti:"Mers pe jos din Puerto de la Cruz", tx:"Plecare din zona La Paz, cobori spre Playa del Castillo, apoi poteca de coastă spre est. ~3,5 km, 45–50 min. Alternativ: taxi până la El Bollullo Bar, apoi 10 min de scări."},
+        {hr:"10:50", ti:"Playa del Bollullo", tx:"Umbră naturală de la faleze după-amiaza. Bar mic sus pentru apă rece și mâncare simplă."},
+        {hr:"14:00", ti:"Prânz la El Bollullo Bar", tx:"Terasă deasupra plajei. Sandvișuri, salate, bere rece. ~10–15 €."},
+        {hr:"15:00", ti:"Extensie: Playa de los Patos", tx:"20 min pe jos spre est, pe poteca de coastă. Și mai sălbatică, uneori complet pustie."},
+        {hr:"Bonus", ti:"Rambla de Castro", tx:"Traseu de coastă de ~4 km la Los Realejos (autobuz 363, 20 min). Palmieri, o cascadă mică, un fort vechi pe stâncă. Complet plat și ușor."}
+      ],
+      notes:[
+        {k:"tip", t:"Ia pantofi normali de mers, nu șlapi. Poteca are porțiuni cu pietriș și pantă."},
+        {k:"warn", t:"Valuri puternice, curenți, fără salvamar. Se poate înota doar când marea e calmă. Nu lăsa lucrurile aproape de apă."},
+        {k:"warn", t:"Poteca spre Los Patos se închide periodic din cauza căderilor de pietre. Întreabă la barul din Bollullo. Alternativă: Playa del Ancón."}
+      ]
+    },
+    {
+      combos:[
+        {id:"masca", why:"amândouă în nord-vest, pe același drum TF-5"}
+      ],
+      weather:[
+        {k:"good", t:"Orașul se vizitează în orice vreme; piscinele cer însă mare calmă."},
+        {k:"bad", t:"Piscinele naturale se închid oficial când sunt valuri mari. Verifică steagul înainte să cobori."}
+      ],
+      id:"garachico", short:"Garachico", cat:"town", coord:"28.3735,-16.7661", mapq:"Piscinas Naturales El Caletón", scene:"coast", name:"Garachico + Icod de los Vinos",
+      blurb:"Piscine naturale săpate în lavă și cel mai bătrân copac din Canare.",
+      car:true, dur:"Zi întreagă", hours:"09:30–18:30",
+      fit:{sun:3,partly:3,cloud:2,rain:2},
+      lede:"Garachico a fost distrus de erupția din 1706, care a acoperit portul cu lavă. Din acea catastrofă au rezultat piscinele naturale El Caletón.",
+      timeline:[
+        {hr:"09:30", ti:"Plecare", tx:"Mașină: TF-5 spre vest, ~45 min până la Icod. Autobuz: linia 363, ~1h, ~4 €."},
+        {hr:"10:15", ti:"Icod de los Vinos", tx:"<b>Drago Milenario</b> — dragonier cu o vârstă estimată între 800 și 1.000 de ani, simbolul insulei. Îl vezi gratuit din Plaza de la Iglesia.<br>Centrul vechi: străduțe cu balcoane de lemn, magazine cu miere de palmier și vinuri locale."},
+        {hr:"12:45", ti:"Garachico — piscinele El Caletón", tx:"Gratuite, cu scări de acces și dușuri. Apa e cristalină și mult mai calmă decât la plajele deschise."},
+        {hr:"13:45", ti:"Centrul vechi Garachico", tx:"<ul><li>Castillo de San Miguel — fortul care a supraviețuit erupției, ~1,50 €</li><li>Plaza de la Libertad — piața centrală, umbroasă</li><li>Convento de San Francisco — secolul XVI</li></ul>"},
+        {hr:"15:00", ti:"Prânz cu pește", tx:"Restaurante în jurul Plaza de la Libertad și pe faleză, lângă piscine."},
+        {hr:"16:30", ti:"Întoarcere cu opriri", tx:"<b>Mirador de Garachico</b> (pe TF-42) — panoramă peste tot orașul și limba de lavă intrată în mare.<br><b>San Juan de la Rambla</b> — sat mic cu piscine naturale proprii, mai puțin cunoscute."}
+      ],
+      notes:[
+        {k:"tip", t:"Poza bună la Drago e din piața bisericii, nu din interiorul parcului. Economisești 5 €."},
+        {k:"warn", t:"Piscinele se închid când marea e agitată. Verifică steagul la fața locului."},
+        {k:"warn", t:"Ia încălțări de apă — fundul piscinelor e stâncos și tăios."}
+      ]
+    },
+    {
+      combos:[
+        {id:"garachico", why:"Garachico e pe drumul de întoarcere spre bază"},
+        {id:"stargazing", why:"ești deja în vest — urci la Teide seara în loc să cobori"}
+      ],
+      weather:[
+        {k:"good", t:"Cere cer senin: tot rostul drumului e priveliștea spre canion și spre ocean."},
+        {k:"bad", t:"Evită pe ceață — TF-436 are serpentine fără parapet, iar vizibilitatea scăzută transformă drumul în calvar."}
+      ],
+      permit:{"need": true, "name": "Barranco de Masca (doar pentru canion)", "what": "<b>Satul Masca nu are nevoie de permis.</b> Doar traseul prin canion până la mare.", "how": "Rezervare pe <b>reservasmasca.com</b>, sistem separat de Tenerife ON.", "when": "Se închide după ploi. Verifică starea cu câteva zile înainte.", "cost": "~10 €, cască obligatorie inclusă.", "extra": "Se face pe sens unic, cu întoarcere cu barca. 3–4 ore doar coborârea."},
+      id:"masca", short:"Masca", cat:"nature", coord:"28.3054,-16.8399", mapq:"Masca", scene:"volcano", name:"Masca + Parcul Rural Teno",
+      blurb:"Sat de piatră agățat între două canioane, în colțul cel mai izolat al insulei.",
+      car:true, dur:"Zi întreagă", hours:"09:00–18:00",
+      fit:{sun:3,partly:2,cloud:1,rain:1},
+      lede:"Drumul TF-436 e cel mai spectaculos și cel mai solicitant de pe insulă. Merită, dar citește notele înainte.",
+      timeline:[
+        {hr:"09:00", ti:"Plecare", tx:"TF-5 spre vest → Icod → Santiago del Teide → TF-436. ~1h30."},
+        {hr:"10:30", ti:"Satul Masca", tx:"~100 de locuitori, case de piatră pe o creastă. Parcare mică — vino devreme sau parchează mai sus. Plimbare prin sat: 45 min, cu câteva terase spre canion."},
+        {hr:"12:30", ti:"Prânz în Masca", tx:"Localuri mici cu terase spre canion. Simplu, dar priveliștea plătește."},
+        {hr:"14:15", ti:"Buenavista + Teno Alto", tx:"Coborâre pe partea și mai îngustă a TF-436. Teno Alto — platou înalt cu pășuni și brânzeturi de capră locale."},
+        {hr:"16:00", ti:"Punta de Teno", tx:"Far din 1897 pe o limbă de lavă, faleze de sute de metri, La Gomera vizibilă pe zi senină. Apusul de aici e printre cele mai bune de pe insulă."}
+      ],
+      notes:[
+        {k:"warn", t:"TF-436 are serpentine foarte strânse, fără parapet pe porțiuni, lățime pentru o mașină și jumătate. Evită orele 11:00–15:00, când circulă autocarele."},
+        {k:"tip", t:"Vino dinspre Santiago del Teide (sud), nu dinspre Buenavista. Panta e mai blândă și ai peisajul în față."},
+        {k:"tip", t:"Dacă nu te simți confortabil cu drumul, există excursii cu microbuz din Puerto de la Cruz (~35–45 €)."},
+        {k:"warn", t:"Accesul cu mașina la Punta de Teno e restricționat în majoritatea zilelor — se intră cu naveta gratuită (linia 369) din Buenavista. Verifică pe loc."},
+        {k:"tip", t:"Canionul Barranco de Masca necesită rezervare pe reservasmasca.com (~10 €), cască obligatorie, 3–4 ore doar coborârea. Doar dacă îi dedici toată ziua."}
+      ]
+    },
+    {
+      combos:[
+        {id:"bollullo", why:"amândouă scurte, amândouă la 20 de minute de bază"},
+        {id:"teide", why:"La Orotava e pe drumul spre Teide, bună ca oprire de dimineață"},
+        {id:"rambla", why:"amândouă jumătate de zi, amândouă cu autobuzul"}
+      ],
+      weather:[
+        {k:"good", t:"Merge perfect pe înnorat: aproape tot ce faci e în centrul vechi, la interior sau la umbră."},
+        {k:"bad", t:"Nu are minusuri meteo reale. Pe ploaie tare, urcușul pe străzile pietruite devine alunecos."}
+      ],
+      id:"orotava", short:"La Orotava", cat:"town", coord:"28.3915,-16.5226", mapq:"La Orotava", scene:"town", name:"La Orotava + guachinche",
+      blurb:"Cel mai frumos oraș colonial din nord, la 15 minute de bază. Plus masa de prânz tradițională.",
+      car:false, dur:"Jumătate de zi", hours:"10:00–17:00",
+      fit:{sun:2,partly:3,cloud:3,rain:2},
+      lede:"Bun pentru o zi mai lejeră sau pentru o după-amiază înnorată. Se ajunge cu autobuzul 345 sau 353, ~20 min.",
+      timeline:[
+        {hr:"10:20", ti:"Centrul istoric pe jos", tx:"Orașul e pe pantă — pregătește-te de urcat.<ul><li><b>Casa de los Balcones</b> — balcoane de lemn sculptat din secolul XVII, cu ateliere de broderie și magazin de artizanat (~5 €)</li><li><b>Casa Lercaro</b> — vizavi, cu curte interioară</li><li><b>Iglesia de la Concepción</b> — barocă, una din cele mai frumoase din Canare</li><li><b>Jardines del Marquesado</b> — grădină în terase, liniștită</li></ul>"},
+        {hr:"13:30", ti:"Prânz la guachinche", tx:"Tavernă rurală canariană: originar o casă de țară unde producătorul își vindea vinul propriu, cu mâncare de casă alături.<ul><li>Meniu scurt, uneori doar spus verbal</li><li>Vin de casă la carafă</li><li>12–20 € de persoană cu tot cu vin</li></ul><b>În zonă:</b> El Cubano, El Ramal, Los Gómez (La Orotava) · El Pino, La Viña (Los Realejos)"},
+        {hr:"16:00", ti:"Mirador Humboldt", tx:"Pe drumul spre Puerto de la Cruz. Panorama peste toată Valea Orotava. Humboldt a descris-o în 1799 ca fiind cea mai frumoasă din lume."}
+      ],
+      notes:[
+        {k:"tip", t:"La Casa de los Balcones găsești cele mai bune suveniruri autentice de pe insulă — broderie calado, ceramică, miere de palmier. Mult peste magazinele turistice din Puerto."},
+        {k:"warn", t:"Verifică pe Google Maps dacă guachinche-ul e deschis înainte să te deplasezi. Programele se schimbă des și multe acceptă doar cash."}
+      ]
+    },
+    {
+      combos:[
+        {id:"teresitas", why:"plaja e la 20 de minute cu autobuzul 910 din Santa Cruz"}
+      ],
+      weather:[
+        {k:"good", t:"Cea mai bună alegere pe ploaie: muzee, piețe acoperite, tramvai, baruri de tapas."},
+        {k:"bad", t:"Pe caniculă, centrul istoric are puțină umbră la prânz."}
+      ],
+      id:"laguna", short:"La Laguna", cat:"town", coord:"28.4874,-16.3159", mapq:"San Cristóbal de La Laguna", scene:"town", name:"La Laguna + Santa Cruz",
+      blurb:"Centru UNESCO, muzee, piețe acoperite. Cea mai bună seară de tapas de pe insulă.",
+      car:false, dur:"Zi întreagă", hours:"09:30–23:00",
+      fit:{sun:2,partly:3,cloud:3,rain:3},
+      lede:"Ziua de rezervă pentru vreme proastă, dar merită și pe soare. La Laguna e oraș universitar — baruri pline seara, fără atmosferă de resort.",
+      timeline:[
+        {hr:"09:30", ti:"Puerto de la Cruz → La Laguna", tx:"Linia 103 (directă, prin Botánico), ~30 min. Sau linia 102. ~4 €, mai ieftin cu cardul ten+."},
+        {hr:"10:00", ti:"San Cristóbal de La Laguna", tx:"Primul oraș colonial spaniol construit fără ziduri, cu plan în grilă — modelul exportat apoi în toată America Latină.<ul><li>Catedrala, cu turn vizitabil</li><li>Iglesia de la Concepción — cea mai veche din insulă (1496)</li><li>Calle San Agustín — casele coloniale cele mai frumoase</li><li>Plaza del Adelantado, Mercado Municipal</li></ul>"},
+        {hr:"13:00", ti:"Tapas", tx:"Calle Herradores și Plaza del Cristo — cea mai mare densitate de baruri de tapas din insulă."},
+        {hr:"15:00", ti:"Tramvai spre Santa Cruz", tx:"Linia 1, ~40 min, ~1,35 €. Frecvent, comod, și e o plimbare plăcută în sine."},
+        {hr:"15:45", ti:"Santa Cruz", tx:"<ul><li><b>Auditorio de Tenerife</b> — clădirea lui Calatrava</li><li><b>Mercado de Nuestra Señora de África</b> — piață colonială acoperită (dimineața)</li><li><b>Museo de la Naturaleza</b> — mumii guanche, populația pre-hispanică. Cel mai bun muzeu de pe insulă, ~5 €</li><li><b>Parque García Sanabria</b> — sculpturi moderne, plante subtropicale</li></ul>"},
+        {hr:"19:30", ti:"Seara înapoi în La Laguna", tx:"Calle Herradores, Plaza del Cristo, Calle San Juan se umplu după 20:00. Prețuri mici, oameni de toate vârstele."}
+      ],
+      notes:[
+        {k:"tip", t:"Multe case coloniale au curți interioare vizitabile gratuit — intră pur și simplu pe poartă când e deschisă."},
+        {k:"tip", t:"Playa de las Teresitas e la 20 min cu autobuzul 910 din Santa Cruz. Nisip auriu adus din Sahara, apă calmă protejată de dig. Opusul plajelor sălbatice."},
+        {k:"warn", t:"Verifică ultimul autobuz spre Puerto de la Cruz înainte să te așezi la ultimul pahar."}
+      ]
+    },
+    {
+      combos:[
+        {id:"caiac", why:"amândouă în sud-vest, o singură zi de mașină pentru două ieșiri pe apă"},
+        {id:"scufundari", why:"același colț de insulă, dar lasă o zi între ele dacă zbori curând"}
+      ],
+      weather:[
+        {k:"good", t:"Cere mare calmă. Dimineața e aproape mereu mai liniștită decât după-amiaza."},
+        {k:"bad", t:"Pe vânt și valuri, excursia se anulează sau devine foarte neplăcută dacă ai rău de mare."}
+      ],
+      id:"balene", short:"Los Gigantes", cat:"sea", coord:"28.2464,-16.8419", mapq:"Los Gigantes", scene:"sea", name:"Balene & delfini cu barca",
+      blurb:"Populații rezidente tot anul în strâmtoarea spre La Gomera. Peste 90% șanse să vezi animale.",
+      car:true, dur:"5–6 ore", hours:"08:00–16:30",
+      fit:{sun:3,partly:3,cloud:2,rain:1},
+      lede:"Nu e sezonier — balenele-pilot și delfinii mari trăiesc permanent aici. Porturile de plecare sunt în sud-vest, la ~1h15 de bază.",
+      timeline:[
+        {hr:"08:00", ti:"Plecare din Puerto de la Cruz", tx:"Spre <b>Los Gigantes</b> (recomandat — falezele de 500–600 m fac excursia dublu interesantă) sau Puerto Colón."},
+        {hr:"10:00", ti:"Excursia", tx:"<ul><li><b>Catamaran</b> (2–3h, 25–35 €) — stabil, mai mulți oameni, cu masă</li><li><b>Barcă mică</b> (2h, 35–50 €) — grup mic, mai aproape de apă</li><li><b>Excursie lungă</b> (4–5h, 50–70 €) — include baie în larg și prânz</li></ul>Ce poți vedea: balene-pilot, delfini mari, delfini comuni și pătați, ocazional cașaloți și țestoase."},
+        {hr:"13:30", ti:"Prânz în Los Gigantes", tx:"Restaurante în port, cu vedere la faleze."},
+        {hr:"15:00", ti:"Întoarcere", tx:"Opțional, oprire la Mirador de Archipenque pentru falezele văzute de sus."}
+      ],
+      notes:[
+        {k:"tip", t:"Alege un operator cu certificat „Barco Azul\" — respectă distanțele legale față de animale. E și mai etic, și de obicei o experiență mai bună."},
+        {k:"tip", t:"Dimineața marea e mai calmă decât după-amiaza. Rezervă cursa de dimineață."},
+        {k:"warn", t:"Ia hanorac — pe apă e vânt și răcoare chiar pe soare. Și cremă solară: reflexia de pe apă arde foarte tare."}
+      ]
+    },
+    {
+      combos:[
+        {id:"caiac", why:"amândouă la El Puertito, se pot face în aceeași dimineață"},
+        {id:"balene", why:"același colț de sud-vest, o singură zi de drum"}
+      ],
+      weather:[
+        {k:"good", t:"Cere mare calmă și vizibilitate bună — sudul e mai protejat decât nordul aproape mereu."},
+        {k:"bad", t:"După furtună, vizibilitatea scade la câțiva metri și scufundarea își pierde rostul."}
+      ],
+      id:"scufundari", short:"Las Galletas", cat:"sea", coord:"28.0000,-16.6600", mapq:"Las Galletas", scene:"sea", name:"Scufundări cu instructor",
+      blurb:"Fără brevet. Vizibilitate 20–30 m, apă la ~23°C în octombrie, fund vulcanic cu peșteri și arcade.",
+      car:true, dur:"4–5 ore", hours:"Variabil",
+      fit:{sun:3,partly:3,cloud:2,rain:1},
+      lede:"„Bautismo de mar\" — prima scufundare cu instructor, fără certificare necesară. Briefing 30 min, apoi 30–40 min la 6–12 m adâncime.",
+      timeline:[
+        {hr:"Preț", ti:"60–90 €", tx:"Echipament inclus. Nu ai nevoie de experiență, doar să știi să înoți."},
+        {hr:"Unde", ti:"Zone recomandate", tx:"<ul><li><b>Las Galletas / El Puertito</b> (sud, ~1h15) — apă calmă, vizibilitate excelentă, șanse mari să vezi <b>țestoase marine</b></li><li><b>Radazul / Tabaiba</b> (lângă Santa Cruz, ~40 min) — epave scufundate intenționat</li><li><b>Garachico</b> (~45 min) — formațiuni vulcanice, arcade</li></ul>"},
+        {hr:"Vezi", ti:"Ce poți întâlni", tx:"Țestoase verzi, bancuri de salemas și viejas (peștele-papagal canarian), raie-vultur, caracatițe, murene, tuneluri de lavă."},
+        {hr:"Gratis", ti:"Alternativă: snorkeling", tx:"El Caletón (Garachico), Playa de las Teresitas (Santa Cruz), El Puertito (Costa Adeje) — toate cu apă calmă și pești vizibili de la suprafață."}
+      ],
+      notes:[
+        {k:"warn", t:"Nu zbura în primele 18–24 de ore după scufundare. Planific-o cu minim 2 zile înainte de zborul de întoarcere."},
+        {k:"warn", t:"Contraindicații: probleme cardiace, pulmonare, astm, infecții ORL în ziua respectivă. Vei semna o declarație medicală."},
+        {k:"warn", t:"Nu face snorkeling la Bollullo, Benijo sau alte plaje sălbatice din nord. Curenții sunt periculoși."},
+        {k:"tip", t:"Alege un centru PADI sau SSI cu recenzii bune. Confirmă că prețul include tot echipamentul."}
+      ]
+    },
+    {
+      weather:[
+        {k:"good", t:"Cere cer senin și lună sub 25%. Faza lunii contează mai mult decât norii."},
+        {k:"bad", t:"Evită pe vânt: la 2.000 m noaptea sunt aproape 0°C, iar vântul te bagă în mașină după zece minute."}
+      ],
+      permit:{"need": false, "name": "Fără permis", "what": "Parcul e deschis noaptea, accesul cu mașina e liber. Nu ai nevoie de nicio autorizație ca să stai și să te uiți la stele.", "how": "", "when": "", "cost": "", "extra": "Dacă vrei să urci pe traseul spre vârf noaptea, ai nevoie de permisul PNT 10, care nu se dă pentru intervale de noapte."},
+      id:"stargazing", short:"Teide noaptea", cat:"nature", coord:"28.2255,-16.6295",
+      mapq:"Parador de las Cañadas del Teide", scene:"night", name:"Cer înstelat la Teide",
+      blurb:"Parcul e rezervă Starlight. Aer uscat, altitudine mare, aproape fără poluare luminoasă.",
+      car:true, dur:"Seara, 4–5 ore", hours:"18:00–23:00",
+      fit:{sun:3,partly:2,cloud:1,rain:1},
+      lede:"Una din cele mai bune zone din Europa pentru observat stele. Se poate face pe cont propriu, cu mașina, sau cu o excursie organizată care include telescop și ghid.",
+      timeline:[
+        {hr:"Înainte", ti:"Verifică faza lunii", tx:"<b>Cel mai important lucru.</b> Luna plină spală cerul și nu vezi Calea Lactee. Caută o noapte cu luna sub 25%.<br>Vezi tabelul din pagina de rezervări pentru ferestrele bune din 2027."},
+        {hr:"18:00", ti:"Urcare spre parc", tx:"TF-21 prin La Orotava. ~1h10. Dacă pleci mai devreme, prinzi și apusul de sus — merită enorm, Teide aruncă o umbră triunghiulară uriașă peste marea de nori."},
+        {hr:"19:30", ti:"Apus", tx:"Zonele bune: <b>Mirador de la Ruleta</b>, <b>Roques de García</b>, sau terasa de la Parador. Îmbracă-te gros — după apus temperatura cade brusc."},
+        {hr:"20:45", ti:"Întuneric astronomic", tx:"Abia acum cerul e complet negru. Până atunci e amurg. Ai răbdare — ochii au nevoie de ~20 de minute să se adapteze, iar orice ecran aprins strică adaptarea."},
+        {hr:"21:00", ti:"Observare", tx:"Cu ochiul liber vezi Calea Lactee ca o bandă clară. Zonele fără vânt sunt cele adăpostite de Roques.<br>Pentru poze: trepied obligatoriu, expuneri de 15–25 secunde."},
+        {hr:"22:30", ti:"Coborâre", tx:"~1h10 înapoi. Drumul e în serpentine și fără iluminat — mergi încet, atenție la iepuri și la ceață sub 1.500 m."}
+      ],
+      notes:[
+        {k:"warn", t:"Noaptea la 2.000 m sunt aproape 0°C, plus vânt. Geacă de iarnă, căciulă, mănuși. Mulți renunță după 20 de minute pentru că le e frig."},
+        {k:"tip", t:"Excursiile organizate costă ~40–60 € și includ transport, telescop, ghid Starlight și de obicei ceva cald de băut. Merită dacă nu vrei să conduci noaptea pe TF-21."},
+        {k:"tip", t:"Folosește lanternă cu lumină roșie, nu albă. Lumina albă îți strică adaptarea la întuneric și pe a celorlalți."},
+        {k:"warn", t:"Verifică vântul înainte. Peste 40 km/h stai în mașină, nu afară."}
+      ],
+      combos:[
+        {id:"teide", why:"aceeași urcare — faci parcul ziua și stelele seara"},
+        {id:"masca", why:"Masca după-amiaza, apoi urci la Teide pentru apus și stele"}
+      ],
+    },
+    {
+      weather:[
+        {k:"good", t:"Merge chiar și pe parțial înnorat, fiind protejată de dig — apa rămâne calmă când restul coastei are valuri."},
+        {k:"bad", t:"Pe vânt din est devine neplăcută: nisipul fin zboară și nu ai unde te adăposti."}
+      ],
+      id:"teresitas", short:"Las Teresitas", cat:"beach", coord:"28.5085,-16.1866",
+      mapq:"Playa de las Teresitas", scene:"beach", name:"Playa de las Teresitas",
+      blurb:"Nisip auriu adus din Sahara, apă calmă protejată de dig. Opusul plajelor sălbatice din nord.",
+      car:false, dur:"Jumătate de zi", hours:"10:00–17:00",
+      fit:{sun:3,partly:2,cloud:1,rain:1},
+      lede:"Singura plajă din zonă unde poți înota relaxat, fără curenți. Nisipul a fost adus din Sahara în anii '70, iar digul din larg ține valurile afară.",
+      timeline:[
+        {hr:"10:00", ti:"Drum", tx:"Fără mașină: linia 102 sau 103 până în Santa Cruz (~50 min), apoi <b>linia 910</b> spre San Andrés (~20 min). Cu mașina: ~1h10, parcare gratuită de-a lungul plajei."},
+        {hr:"11:00", ti:"Plaja", tx:"1,5 km de nisip, palmieri, umbrele. <b>Amenajată complet</b>: dușuri, toalete, salvamar, chioșcuri.<br>Partea dinspre San Andrés e cea mai liniștită; cea din mijloc, cea mai aglomerată."},
+        {hr:"13:30", ti:"Prânz în San Andrés", tx:"Satul de pescari de la capătul plajei. Restaurante mici cu pește proaspăt, mult mai bune și mai ieftine decât chioșcurile de pe plajă."},
+        {hr:"15:00", ti:"Mirador de las Teresitas", tx:"Punctul de belvedere de pe drumul spre Igueste. Vezi toată plaja de sus, cu golful și munții Anaga în spate. 10 minute cu mașina, sau urcare pe jos."},
+        {hr:"Combinat", ti:"Se leagă cu Anaga", tx:"Plaja e la poalele masivului Anaga. Dacă ai mașină, poți face dimineața traseu prin pădure și după-amiaza baie aici."}
+      ],
+      notes:[
+        {k:"tip", t:"E singura plajă bună de înot din nord-estul insulei. Dacă vrei o zi de plajă adevărată, nu de fotografiat, asta e."},
+        {k:"tip", t:"Vino în timpul săptămânii. Sâmbăta și duminica vin localnicii din Santa Cruz și se umple."},
+        {k:"warn", t:"Umbră puțină în afara palmierilor. Ia umbrelă sau închiriază una."}
+      ],
+      combos:[
+        {id:"anaga", why:"plaja e chiar sub masivul Anaga"},
+        {id:"laguna", why:"ești la 20 de minute de Santa Cruz cu autobuzul 910"}
+      ],
+    },
+    {
+      weather:[
+        {k:"good", t:"Cel mai bun plan de rezervă: merge pe înnorat, e plat, la 20 de minute de bază, și îl oprești când vrei."},
+        {k:"bad", t:"Evită la amiază pe soare puternic — porțiuni lungi fără umbră, deasupra oceanului."}
+      ],
+      id:"rambla", short:"Rambla de Castro", cat:"nature", coord:"28.3960,-16.6008",
+      mapq:"Rambla de Castro, Los Realejos", scene:"coast", name:"Rambla de Castro",
+      blurb:"Traseu de coastă printre palmieri și plantații de banane, cu un fort vechi pe stâncă. Ușor, plat, fără mașină.",
+      car:false, dur:"2–3 ore", hours:"Oricând",
+      fit:{sun:3,partly:3,cloud:2,rain:1},
+      lede:"Cel mai accesibil traseu frumos de lângă bază. Complet plat, bine marcat, cu ocean pe toată lungimea. Bun ca activitate de jumătate de zi sau ca plan de rezervă.",
+      timeline:[
+        {hr:"Drum", ti:"Cum ajungi", tx:"Linia <b>363</b> sau <b>325</b> din Puerto de la Cruz spre Los Realejos, ~20 min. Cobori la San Vicente sau la Hotel Maritim.<br>Cu mașina: parcare la capătul dinspre Los Realejos."},
+        {hr:"Traseu", ti:"~4 km dus-întors, 2 ore lejer", tx:"Poteca urmează linia coastei, printre <b>palmieri canarieni</b> și plantații de banane. Diferență de nivel mică, potrivit pentru orice condiție fizică."},
+        {hr:"Pe drum", ti:"Ce vezi", tx:"<ul><li><b>Casa Hamilton</b> — ruinele unei stații de pompare din secolul XIX, direct pe stâncă deasupra oceanului. Cel mai fotogenic punct.</li><li><b>Fortín de San Fernando</b> — fort mic din secolul XVIII</li><li><b>Playa de los Roques</b> — plajă mică de pietre, acces pe scări</li><li>Un izvor și o zonă umbroasă la mijloc</li></ul>"},
+        {hr:"Apoi", ti:"Se combină", tx:"Ești la 20 de minute de bază. Poți face traseul dimineața și după-amiaza altceva — La Orotava, Bollullo sau centrul din Puerto."}
+      ],
+      notes:[
+        {k:"tip", t:"Cel mai bun plan de rezervă din ghid: e aproape, nu are nevoie de mașină, merge și pe înnorat, și durează exact cât vrei tu."},
+        {k:"tip", t:"Lumina cea mai bună pentru Casa Hamilton e după-amiaza târziu, cu soarele dinspre ocean."},
+        {k:"warn", t:"Nu coborî pe stânci în afara potecii marcate. Roca vulcanică e friabilă."}
+      ],
+      combos:[
+        {id:"orotava", why:"amândouă scurte și fără mașină, la câteva minute una de alta"},
+        {id:"bollullo", why:"amândouă pe coasta de lângă Puerto"},
+        {id:"puerto", why:"te întorci în oraș în aceeași după-amiază"}
+      ],
+    },
+    {
+      weather:[
+        {k:"good", t:"Cere mare calmă și dimineață devreme, înainte să crească vântul și traficul de bărci."},
+        {k:"bad", t:"Evită după-amiaza pe vânt: vâslitul înapoi împotriva vântului e obositor și golful se agită."}
+      ],
+      id:"caiac", short:"Caiac El Puertito", cat:"sea", coord:"28.0908,-16.7550",
+      mapq:"El Puertito de Adeje", scene:"sea", name:"Caiac cu țestoase la El Puertito",
+      blurb:"Golf mic din sud-vest cu țestoase verzi rezidente. Se ajunge cu caiacul din La Caleta sau Los Cristianos.",
+      car:true, dur:"Jumătate de zi", hours:"09:00–14:00",
+      fit:{sun:3,partly:2,cloud:1,rain:1},
+      lede:"Cunoscut local drept Turtle Bay. Țestoasele verzi stau permanent în golf și se lasă abordate de aproape. Apa e calmă și limpede, potrivit și dacă n-ai mai făcut caiac.",
+      timeline:[
+        {hr:"Variante", ti:"Ghidat sau pe cont propriu", tx:"<ul><li><b>Tur ghidat</b> (~35–50 €, 2–3 ore) — instructor, echipament, snorkeling inclus, uneori transfer din zona de sud. Recomandat dacă e prima dată.</li><li><b>Închiriere simplă</b> (de la ~20 €/oră pentru un caiac de o persoană) — mergi singur, ritmul tău</li></ul>"},
+        {hr:"De unde", ti:"Puncte de plecare", tx:"<b>La Caleta</b> — cel mai aproape de El Puertito, ~20 min de vâslit.<br><b>Los Cristianos</b> — mai multe firme, dar drum mai lung pe apă.<br>De la Puerto de la Cruz: ~1h15 cu mașina."},
+        {hr:"În apă", ti:"Ce vezi", tx:"Țestoase verzi (cele mai probabile), bancuri de pești, uneori raie-vultur. Apa are 22–23°C în octombrie, vizibilitate 15–20 m."},
+        {hr:"Reguli", ti:"Cum te porți cu țestoasele", tx:"<b>Nu le atinge și nu le hrăni.</b> E interzis și le face rău — le schimbă comportamentul și le expune la răniri de la bărci. Păstrează 2–3 metri distanță și lasă-le să se apropie ele."}
+      ],
+      notes:[
+        {k:"tip", t:"Dimineața devreme marea e cea mai calmă și sunt mai puține bărci. După prânz crește vântul."},
+        {k:"tip", t:"Se combină perfect cu scufundările sau cu balenele — toate trei sunt în același colț de sud-vest. O singură zi de mașină pentru două activități."},
+        {k:"warn", t:"Cremă solară rezistentă la apă și tricou. Pe caiac ești expus continuu, iar reflexia de pe apă dublează arsura."},
+        {k:"warn", t:"Lasă telefonul în mașină sau ia o husă etanșă legată de caiac."}
+      ],
+      combos:[
+        {id:"scufundari", why:"amândouă la El Puertito, în aceeași dimineață"},
+        {id:"balene", why:"același port de plecare, o singură zi de mașină"}
+      ],
+    }
+  ],
+
+  pages:[
+    {
+      id:"transport", em:"🚌", name:"Transport public",
+      blurb:"Linii TITSA, cardul ten+, aplicații",
+      lede:"Rețeaua e operată de TITSA — autobuze verzi, numite local guaguas. Ieftină, punctuală, acoperă aproape tot ce ai nevoie din Puerto de la Cruz.",
+      sections:[
+        {h:"Aplicații de instalat înainte de plecare", table:{
+          cols:["App","Pentru ce"],
+          rows:[["TITSA (oficială)","Orare exacte, planificator"],["Transit","Timp real, unde e autobuzul acum"],["Organic Maps / Maps.me","Hărți offline — esențial pentru Anaga"],["AEMET","Vremea oficială, radar pe zone"],["Wikiloc","Trasee GPS descărcabile offline"],["Google Translate","Cu spaniola descărcată offline"]]}},
+        {h:"De la aeroport la Puerto de la Cruz", body:"<b>De la Tenerife Sud (TFS):</b><ul><li><b>Linia 343</b> — directă, ~1h40. <b>Doar 4 curse pe zi</b> (în jur de 07:15, 11:30, 16:00, 19:30). Verifică orarul înainte de zbor.</li><li><b>Alternativă mai flexibilă:</b> autobuz până la Intercambiador Santa Cruz, apoi linia 102 sau 103 spre Puerto. ~1h35 în total, cu o schimbare.</li></ul><b>De la Tenerife Nord (TFN):</b> linia 30, ~30 min, frecventă.",
+         notes:[{k:"tip",t:"Ia cardul ten+ de la automatele din sala de sosiri. Biletul plătit în autobuz de la TFS costă ~14 €; cu card scade spre ~9,5 €."},
+                {k:"warn",t:"Cele 4 curse pe zi ale liniei 343 sunt capcana cea mai frecventă. Dacă aterizezi la ora greșită, aștepți ore întregi sau plătești taxi."}]},
+        {h:"Cardul ten+", body:"Card reîncărcabil care reduce prețul cu 30–50% față de plata cash. Cost card ~2 €, apoi îl încarci.<ul><li>Se cumpără din stațiile principale, chioșcuri, unele magazine</li><li>Se poate folosi de mai multe persoane</li><li><b>Validezi la urcare ȘI la coborâre</b> — altfel se taxează traseul complet</li></ul>",
+         notes:[{k:"tip",t:"Dacă folosești autobuzul 4–5 zile, cardul se amortizează din prima zi. Ia-l de la aeroport la sosire."}]},
+        {h:"Liniile care te interesează", table:{
+          cols:["Linie","Traseu","Durată"],
+          rows:[
+            ["30","Puerto ↔ Aeroport Nord (TFN)","~30 min"],
+            ["<b>343</b>","<b>Puerto ↔ ambele aeroporturi ↔ Costa Adeje</b>","~1h40 de la TFS"],
+            ["103","Puerto ↔ La Laguna (directă)","~30 min"],
+            ["102","Puerto ↔ Santa Cruz (prin Las Arenas)","~50 min"],
+            ["100","Puerto ↔ Santa Cruz (fără opriri)","~40 min"],
+            ["345 / 353","Puerto ↔ La Orotava (circular)","~20 min"],
+            ["363","Puerto ↔ Buenavista, prin Icod și Garachico","~1h"],
+            ["381","Puerto ↔ Icod (mai rapid)","~40 min"]
+          ]}},
+        {h:"Din La Laguna (schimbi acolo)", table:{
+          cols:["Linie","Ajungi la"],
+          rows:[["273 / 275","Cruz del Carmen (Anaga)"],["246","Taganana / Benijo"],["105","Punta del Hidalgo"],["Tranvía 1","Santa Cruz, la 5–10 min"]]}},
+        {h:"Unde ai nevoie de mașină", body:"<ul><li><b>Teide</b> — linia 348 are doar o cursă pe zi dus-întors, cu program strict</li><li><b>Anaga interior</b> — se ajunge, dar cu schimbări și orar rar</li><li><b>Masca</b> — practic imposibil fără mașină sau excursie organizată</li><li><b>Punta de Teno</b> — doar cu naveta din Buenavista</li></ul>",
+         notes:[{k:"tip",t:"Închiriază mașina 3–4 zile (Teide, Anaga, Masca, Garachico). Restul zilelor merge perfect cu autobuzul."}]},
+        {h:"De reținut", body:"<ul><li>Autobuzele <b>nu opresc automat</b> — fă semn cu mâna</li><li>La coborâre apeși butonul de stop din timp</li><li>Șoferii vorbesc de obicei doar spaniolă</li><li>Duminica și sărbătorile, frecvența scade mult</li></ul>"},
+        {h:"Parcări", table:{cols:["Loc","Situație"],rows:[
+          ["Puerto centru","Subterane ~1 €/h, ~12 €/zi. Zonă albastră pe stradă."],
+          ["Cruz del Carmen","Gratuită, mică — vino înainte de 9:30"],
+          ["Benijo","Foarte limitată, pe marginea drumului"],
+          ["Teide (telecabină)","Gratuită, mare, se umple la prânz"],
+          ["Masca","Mică. Parchează mai sus și coboară pe jos."],
+          ["Garachico","Publică lângă piscine, în general ok"]]}}
+      ]
+    },
+    {
+      id:"mancare", em:"🍽️", name:"Restaurante și gastronomie",
+      blurb:"Ce mănânci, unde, la ce preț",
+      lede:"Buget 30–45 €/zi e confortabil aici. Prânz la guachinche (12–20 €) și buget rămas pentru o cină bună seara.",
+      sections:[
+        {h:"Ce trebuie neapărat să mănânci", table:{cols:["Fel","Ce e"],rows:[
+          ["Papas arrugadas","Cartofi mici fierți în apă foarte sărată, cu mojo"],
+          ["Mojo rojo / verde","Sosurile canariene: roșu picant, verde cu coriandru"],
+          ["Ropa vieja","Tocană de carne mărunțită cu năut și cartofi"],
+          ["Conejo en salmorejo","Iepure marinat în usturoi și vin"],
+          ["Carne fiesta","Cuburi de porc marinat, prăjite"],
+          ["Queso asado con mojo","Brânză de capră la grătar"],
+          ["Puchero canario","Ciorbă densă, la prânz"],
+          ["Gofio","Făină de cereale prăjite, ingredient pre-hispanic"],
+          ["Vieja","Peștele-papagal canarian, cel mai apreciat local"],
+          ["Cherne","Pește alb local, foarte bun"]]}},
+        {h:"Deserturi și băuturi", body:"<b>Deserturi:</b> bienmesabe (cremă de migdale), Príncipe Alberto (mousse de ciocolată), quesillo (flan canarian), frangollo (din gofio).<br><br><b>Vinuri:</b> Tacoronte-Acentejo (roșii ușoare), Ycoden-Daute-Isora (albe). Solurile vulcanice dau un caracter mineral distinct.<br><br><b>Barraquito</b> — cafeaua emblematică: lapte condensat, licor 43, espresso, lapte spumat, coajă de lămâie, scorțișoară. Cere-l „completo\"."},
+        {h:"Guachinches (prânz, nord)", body:"<b>La Orotava:</b> El Cubano, El Ramal, Los Gómez<br><b>Los Realejos:</b> El Pino (iepure în salmorejo), La Viña (vedere peste vale)<br><b>Santa Úrsula / La Matanza:</b> El Primero, La Huerta de Ana y Eva, Basilio<br><b>Lângă La Laguna:</b> La Cueva de Casiano",
+         notes:[{k:"warn",t:"Verifică pe Google Maps dacă e deschis înainte să te deplasezi. Multe acceptă doar cash."}]},
+        {h:"Pește pe malul mării", body:"<b>Puerto de la Cruz:</b> zona Puerto Pesquero (portul vechi), promenada San Telmo<br><b>Garachico:</b> în jurul Plaza de la Libertad și pe faleză<br><b>Benijo:</b> Casa África, El Mirador — deasupra plajei, pește prins local<br><b>Los Gigantes:</b> restaurante în port, cu vedere la faleze",
+         notes:[{k:"tip",t:"Întreabă ce e proaspăt azi în loc să comanzi de pe meniu. Peștele se vinde la kilogram — confirmă prețul înainte."}]},
+        {h:"Tapas", body:"<b>La Laguna</b> (cea mai bună zonă de pe insulă): Calle Herradores, Plaza del Cristo, Calle San Juan<br><b>Puerto de la Cruz:</b> Plaza del Charco și străduțele din jur",
+         notes:[{k:"tip",t:"În Canare tapas nu sunt gratuite cu băutura ca în Andaluzia. 3–8 € porția. Dacă ești singur, cere media ración în loc de ración întreagă."}]},
+        {h:"Prețuri", table:{cols:["","Preț"],rows:[
+          ["Cafea / barraquito","1,50–2,50 €"],["Mic dejun","4–6 €"],["Meniu del día","10–15 €"],
+          ["Guachinche (masă + vin)","12–20 €"],["Tapa","3–8 €"],["Cină normală","20–30 €"],
+          ["Cină cu pește bună","30–45 €"],["Bere","2–3 €"],["Pahar de vin local","2–4 €"]]}},
+        {h:"Orele meselor", body:"<b>Prânz:</b> 13:30–15:30. Multe bucătării se închid la 16:00.<br><b>Cină:</b> 20:30–23:00.<br><b>Guachinches:</b> multe servesc doar la prânz.",
+         notes:[{k:"tip",t:"Dacă ți-e foame la 18:00, e ora de merienda — cafea și ceva dulce. Bucătăriile serioase nu funcționează atunci."}]}
+      ]
+    },
+    {
+      id:"vreme", em:"🌥️", name:"Backup pentru vreme",
+      blurb:"Strategia „urmărește soarele\"",
+      lede:"Nordul e verde tocmai pentru că prinde umezeală. Puerto poate fi sub nori în timp ce restul insulei e însorit. Nu e ghinion, e geografie — se rezolvă prin mobilitate.",
+      sections:[
+        {h:"Dimineața, în 3 pași", body:"<ol><li>Deschide <b>AEMET</b> — radar și prognoză pe zone</li><li>Verifică webcamurile (Teide, Puerto, Costa Adeje)</li><li>Alege activitatea potrivită din catalog — fiecare are notat pe ce vreme merge și pe ce vreme nu</li></ol><b>Regula de bază:</b> dacă nordul e sub nori, urcă sau du-te în sud. Nu aștepta să se ridice."},
+        {h:"Plaje de rezervă", table:{cols:["Plajă","Cum ajungi","De ce"],rows:[
+          ["Las Teresitas","Autobuz 102 + 910, ~1h30","Nisip auriu, apă calmă protejată de dig"],
+          ["Playa Jardín","Pe jos","Chiar în oraș, amenajată, cu salvamar"],
+          ["El Caletón","Autobuz 363, ~1h","Piscine naturale. Se închid la mare agitată."],
+          ["Playa de la Arena","Mașină, ~1h15","Sud-vest, mult mai probabil însorit"],
+          ["Costa Adeje","Autobuz 343, ~1h45","Zona cea mai însorită. Soare aproape garantat."]]},
+         notes:[{k:"tip",t:"Dacă vezi pe radar că norii stau blocați pe coasta nordică (situație tipică), sudul e liber. Merită drumul de o oră și jumătate."}]},
+        {h:"Plan B pentru fiecare bloc", table:{cols:["Dacă nu poți face…","Fă în schimb…"],rows:[
+          ["Teide (ceață/vânt)","Anaga sau La Orotava"],
+          ["Anaga (drumuri închise)","Rambla de Castro, Los Realejos"],
+          ["Bollullo (mare agitată)","Playa Jardín sau Lago Martiánez"],
+          ["Masca (drumul)","Excursie cu microbuz, sau Garachico + Icod"],
+          ["Balene (mare agitată)","Se reprogramează — majoritatea operatorilor oferă altă zi"],
+          ["Punta de Teno (închis)","Mirador de Archipenque, Los Gigantes"]]}},
+        {h:"Despre calima", body:"Masă de aer cald și praf din Sahara. Aduce ceață galbenă și temperaturi ridicate. Mai frecventă iarna și primăvara — risc mic în octombrie. Dacă apare: evită drumețiile la altitudine, stai la nivelul mării, hidratează-te. Durează de obicei 2–4 zile."},
+        {h:"Starea mării", body:"Steaguri: verde (ok), galben (prudență), roșu (interzis). Site util: aemet.es, secțiunea predicción marítima.",
+         notes:[{k:"warn",t:"Plajele sălbatice din nord (Bollullo, Benijo, Los Patos) nu au salvamar. Curenții de retur sunt reali și au făcut victime. Dacă marea pare agitată, nu intra."}]}
+      ]
+    },
+    {
+      id:"rezervari", em:"📅", name:"Rezervări cu deadline",
+      blurb:"Ce se epuizează dacă amâni",
+      lede:"Ordonate după cât de devreme trebuie făcute. Permisul Teide e cel mai important lucru de pe pagina asta.",
+      sections:[
+        {h:"Permisul pentru vârful Teide", body:"Necesar <b>doar pentru ultimii 163 m</b>, de la stația telecabinei (3.555 m) până la vârf (3.718 m), pe Sendero nº 10 – Telesforo Bravo. Restul parcului și toate celelalte trasee sunt libere.<ul><li><b>Gratuit</b></li><li>Se rezervă prin <b>Tenerife ON</b> — tenerifeon.es</li><li>200 de locuri pe zi, ~160 pentru publicul general, pe intervale orare 9:00–17:00</li><li>Personal și netransmisibil — se verifică actul de identitate</li><li>Îl porți printat sau pe telefon</li></ul>",
+         notes:[
+           {k:"warn",t:"Calendarul se deschide cu câteva luni înainte. Pune-ți memento să verifici periodic începând cu ~6 luni înainte."},
+           {k:"warn",t:"Chiar cu permis, traseul se poate închide din motive meteo. Nu construi toată vacanța în jurul lui."},
+           {k:"tip",t:"Fără permis, telecabina până la La Rambleta tot merită — priveliștea de la 3.555 m e deja spectaculoasă, plus trei miradoare."}]},
+        {h:"Zborul", body:"Rezervă cu <b>4–6 luni înainte</b>.<br><br><b>Criteriul principal sunt orele, nu prețul.</b> Sosire înainte de 12:00 și plecare după 18:00 înseamnă două zile câștigate dintr-un sejur de șapte. Un zbor care aterizează la 16:15 îți consumă prima zi complet.<br><br><b>Tenerife Sud (TFS)</b> are zboruri directe din București (~6h15). <b>Tenerife Nord (TFN)</b> e la 30 min de Puerto, dar de obicei doar cu escală. Cu mașină închiriată de la aeroport, diferența dintre ele contează puțin.<br><br>⏱️ Canarele sunt cu o oră în urma României.",
+         notes:[{k:"tip",t:"Moment bun să începi să urmărești prețurile: martie–aprilie 2027."}]},
+        {h:"Cazarea", body:"Cu <b>3–4 luni înainte</b> ai încă opțiuni bune la preț rezonabil. Zona recomandată: centrul vechi / Plaza del Charco — aproape de tot, inclusiv de stația de autobuz."},
+        {h:"Telecabina Teide", body:"~40 € dus-întors, pe volcanoteide.com. Se epuizează în zilele aglomerate. <b>Anulare gratuită până la 18:00 în ziua precedentă.</b> Dacă se închide din motive meteo, primești banii înapoi integral.",
+         notes:[{k:"tip",t:"Rezervă un interval de dimineață. După-amiaza vântul crește și cu el riscul de închidere."}]},
+        {h:"Mașina", body:"Cu <b>3–4 săptămâni înainte</b>. Companiile locale (<b>Cicar</b>, <b>Autoreisen</b>) includ asigurare completă în preț, fără depozit blocat pe card. ~30–35 €/zi pentru o mașină mică. Permisul românesc e suficient."},
+        {h:"Checklist cronologic", checklist:["~6 luni: verifică deschiderea calendarului pentru permisul Teide","4–6 luni: rezervă zborul","3–4 luni: rezervă cazarea","3–4 săptămâni: rezervă mașina","2–3 săptămâni: rezervă telecabina Teide","1 săptămână: verifică prognoza, planifică ordinea blocurilor","2 zile înainte: rezervă balenele / scufundarea"]}
+      ]
+    },
+    {
+      id:"bagaj", em:"🧳", name:"Checklist bagaj",
+      blurb:"Bifele se salvează",
+      lede:"Tenerife în octombrie are cerințe contradictorii: 25°C la mare și 5°C cu vânt la Teide. Bagajul trebuie să acopere ambele.",
+      sections:[
+        {h:"Esențialul specific pentru Tenerife", checklist:[
+          "Hanorac gros / polar — pentru Teide, nu e opțional",
+          "Windbreaker subțire impermeabil — Anaga și excursia cu barca",
+          "Pantofi de drumeție cu talpă bună",
+          "Încălțări de apă — obligatorii pentru piscinele din Garachico",
+          "Pantaloni lungi",
+          "Rucsac mic de zi (20–25L)",
+          "Ochelari de soare",
+          "Cremă solară SPF 50",
+          "Șapcă sau pălărie",
+          "Sticlă de apă reutilizabilă (minim 1L)"]},
+        {h:"Haine", checklist:[
+          "Tricouri / cămăși ușoare (5–6)","Bluze cu mânecă lungă (1–2)","Pantaloni scurți (2)",
+          "Ceva mai bun pentru o seară în La Laguna","Costume de baie (2)",
+          "Prosop de plajă cu uscare rapidă","Lenjerie, șosete","Șosete de drumeție groase"]},
+        {h:"Electronice", checklist:[
+          "Încărcător + powerbank (GPS-ul consumă mult)","Cameră foto","Căști","Cablu lung de încărcare"],
+         notes:[{k:"tip",t:"Adaptor de priză NU e necesar — Spania are aceleași prize ca România."}]},
+        {h:"Documente", checklist:[
+          "Carte de identitate (e suficientă pentru Spania)",
+          "Cardul European de Sănătate (CEASS) — gratuit de la CNAS",
+          "Permis de conducere","Card de credit pentru garanția la mașină",
+          "Permisul Teide printat sau salvat offline",
+          "Rezervările salvate offline pe telefon"]},
+        {h:"Trusă mică", checklist:[
+          "Plasturi + plasturi pentru bătături","Analgezic","Antiinflamator",
+          "Pastile pentru rău de mare (dacă faci excursia cu balenele)","Gel după soare","Dezinfectant"]},
+        {h:"Bani", checklist:["Cash 100–150 € în bancnote mici","Card de debit/credit"],
+         notes:[{k:"warn",t:"Guachinches și barurile mici de la țară de multe ori nu acceptă card."}]},
+        {h:"Aplicații de instalat", checklist:[
+          "TITSA","AEMET","Organic Maps + harta Tenerife descărcată offline",
+          "Wikiloc + traseele descărcate","Google Translate + spaniola offline"],
+         notes:[{k:"warn",t:"Descarcă hărțile offline înainte de plecare, nu la fața locului. În Anaga nu ai semnal."}]}
+      ]
+    },
+    {
+      id:"foto", em:"📸", name:"Spoturi foto",
+      blurb:"Cu ora optimă pentru fiecare",
+      lede:"Lumina bună: prima oră după răsărit (~7:45 în octombrie) și ultima oră înainte de apus (~19:30).",
+      sections:[
+        {h:"Cele mai bune", body:"<b>Mirador de Chipeque</b> (dimineața, 7:30–9:30) — marea de nori cu Teide deasupra. La marginea drumului, fără efort.<br><br><b>Playa de Benijo</b> (apus) — nisip negru, faleze, Roques de Anaga. Cel mai fotogenic loc de pe coastă.<br><br><b>Mirador Pico del Inglés</b> (dimineața) — panorama peste creasta Anaga, la ~1.000 m.<br><br><b>Roques de García</b> (dimineața sau ultima lumină) — formațiunile cu Teide în spate."},
+        {h:"Foarte bune", body:"<b>Mirador Humboldt</b> (după-amiaza) — Valea Orotava întreagă.<br><br><b>Mirador de Garachico</b> (apus) — orașul de sus cu limba de lavă din 1706.<br><br><b>Punta de Teno</b> (apus) — farul, falezele, La Gomera în larg.<br><br><b>Masca</b> (dimineața) — satul între canioane. Cel mai bun unghi e dinspre Santiago del Teide.<br><br><b>Mirador de Archipenque</b> (apus) — falezele Los Gigantes."},
+        {h:"Bune și accesibile", body:"<b>Playa Jardín</b> (apus) — nisip negru, palmieri, Teide în spate pe zi senină. Cea mai bună poză fără să ieși din oraș.<br><br><b>Drago Milenario</b> (dimineața) — din Plaza de la Iglesia, nu din parc.<br><br><b>Casa de los Balcones</b> (dimineața) — balcoanele sculptate.<br><br><b>Calle San Agustín</b> (devreme, fără oameni) — casele coloniale.<br><br><b>Auditorio de Tenerife</b> (albastru de seară) — de pe faleză, cu oceanul în fundal."},
+        {h:"Noaptea — cer înstelat la Teide", body:"Parcul e rezervă Starlight: altitudine mare, aer uscat, poluare luminoasă minimă. Una din cele mai bune zone din Europa pentru astrofotografie.<ul><li>Trepied obligatoriu</li><li>Lună nouă sau în descreștere</li><li>Haine groase — noaptea la 2.000 m e aproape 0°C</li></ul>",
+         notes:[{k:"tip",t:"Excursiile de astronomie includ transport, telescop și ghid Starlight (~50–60 €). Merită dacă nu vrei să conduci noaptea pe TF-21."}]},
+        {h:"Sfaturi tehnice", body:"<ul><li>Teide cu nori la bază e mai fotogenic decât pe cer complet senin</li><li>Pentru nisipul negru, supraexpune ușor — camerele tind să-l facă prea întunecat</li><li>Ia powerbank: GPS-ul și fotografiatul consumă bateria rapid</li></ul>"}
+      ]
+    },
+    {
+      id:"suveniruri", em:"🛍️", name:"Suveniruri",
+      blurb:"Ce merită și de unde",
+      lede:"Pentru produse alimentare, supermarketul e la fel de bun și mult mai ieftin decât magazinele de suveniruri. Diferența e doar ambalajul.",
+      sections:[
+        {h:"De mâncare și băut", table:{cols:["Produs","Unde"],rows:[
+          ["Mojo (roșu și verde), la borcan","Supermarket, piețe"],
+          ["Sare de mare din salinele insulei","Piețe"],
+          ["Gofio","Supermarket"],
+          ["Miel de palma (sirop de palmier)","Magazine specializate, Icod"],
+          ["Miere canariană","Casa de la Miel, Tacoronte"],
+          ["Vin local","Bodegas, Icod, supermarket"],
+          ["Ron miel","Peste tot"],
+          ["Brânză de capră afumată","Teno Alto, piețe"]]},
+         notes:[{k:"warn",t:"Mojo, miere și lichidele nu trec prin bagajul de mână. Cumpără-le din duty free după control, sau renunță."}]},
+        {h:"Artizanat", table:{cols:["Produs","Unde"],rows:[
+          ["Calado canario (broderie tradițională)","Casa de los Balcones, La Orotava"],
+          ["Ceramică guanche","La Orotava, Santa Cruz"],
+          ["Timple (instrument cu 5 corzi)","Magazine de muzică, Santa Cruz"],
+          ["Cuțite canariene (naifes)","Magazine de artizanat"],
+          ["Împletituri din palmier","Piețe locale"]]},
+         notes:[{k:"tip",t:"Casa de los Balcones din La Orotava e cel mai bun loc pentru artizanat autentic. Au ateliere pe loc, produsele sunt reale."}]},
+        {h:"Unde cumperi", body:"<b>Piețe:</b> Mercado de Nuestra Señora de África (Santa Cruz) — cea mai frumoasă, stil colonial. Mercado Municipal (La Laguna).<br><br><b>Artizanat:</b> Casa de los Balcones (La Orotava), Casa de la Aduana (Puerto).<br><br><b>Supermarket:</b> Mercadona, Hiperdino, Spar — raion de produse canariene la prețuri normale."},
+        {h:"De evitat", body:"<ul><li>Magazinele de pe promenada turistică — aceleași produse, prețuri duble</li><li>„Artizanat\" produs în serie în afara insulei — verifică eticheta</li><li>Aloe vera sub 20% concentrație — caută 95%+</li></ul>"}
+      ]
+    },
+    {
+      id:"buget", em:"💰", name:"Buget",
+      blurb:"7 zile, o persoană",
+      lede:"Estimare pentru octombrie 2027. Recalculează cu 6–12 luni înainte.",
+      sections:[
+        {h:"Total estimat", table:{cols:["Categorie","Minim","Confortabil"],rows:[
+          ["Zbor (BUC ↔ TFS, direct)","280 €","320 €"],
+          ["Cazare (6 nopți)","270 €","360 €"],
+          ["Mâncare (7 zile)","210 €","315 €"],
+          ["Mașină (3–4 zile + benzină)","130 €","180 €"],
+          ["Transport public","25 €","40 €"],
+          ["Activități și intrări","90 €","180 €"],
+          ["Suveniruri","30 €","70 €"],
+          ["Rezervă (~10%)","90 €","140 €"],
+          ["TOTAL","~1.125 €","~1.605 €"]]},
+         notes:[{k:"tip",t:"Ținta de 600–900 € e atinsă dacă: zbor sub 200 €, Airbnb în loc de hotel, gătești o parte din mese, mașina doar 2–3 zile."}]},
+        {h:"Cazare (6 nopți)", table:{cols:["Tip","€/noapte","Total"],rows:[
+          ["Airbnb — cameră cu baie","35–45 €","210–270 €"],
+          ["Airbnb — apartament mic","45–60 €","270–360 €"],
+          ["Hotel simplu cu mic dejun","45–60 €","270–360 €"],
+          ["Hotel 3* bun","65–85 €","390–510 €"]]},
+         notes:[{k:"tip",t:"Apartamentul întreg costă cât hotelul dar îți dă bucătărie — se amortizează prin mâncare."}]},
+        {h:"Activități", table:{cols:["Activitate","Preț"],rows:[
+          ["Permisul Teide","Gratuit"],["Telecabină Teide","40 €"],["Loro Parque","40 €"],
+          ["Excursie balene","25–50 €"],["Scufundare cu instructor","60–90 €"],
+          ["Excursie astronomică","50–60 €"],["Lago Martiánez","5,50 €"],
+          ["Museo de la Naturaleza","5 €"],["Casa de los Balcones","5 €"],
+          ["Trasee de drumeție","Gratuit"],["Plaje și piscine naturale","Gratuit"],["Miradoare","Gratuit"]]},
+         notes:[{k:"tip",t:"Selecție rezonabilă: telecabină + Loro Parque + balene + scufundare = 185 €. Sau doar telecabină + balene = 75 €."}]},
+        {h:"Plăți", body:"Euro, fără schimb valutar. Cardul se acceptă aproape peste tot cu excepția guachinches și barurilor mici. Canarele au TVA redus (<b>IGIC ~7%</b> în loc de 21%) — multe produse sunt mai ieftine decât în Spania continentală."},
+        {h:"Plan de economisire (start ianuarie 2027)", table:{cols:["Buget țintă","Lunar (10 luni)"],rows:[
+          ["900 €","~90 €/lună (~450 lei)"],["1.200 €","~120 €/lună (~600 lei)"],["1.500 €","~150 €/lună (~750 lei)"]]}}
+      ]
+    },
+    {
+      id:"spaniola", em:"🗣️", name:"Fraze utile",
+      blurb:"Spaniolă de teren",
+      lede:"În Puerto și zonele turistice se vorbește engleză. În guachinches, sate mici, autobuze și piețe — de multe ori nu.",
+      sections:[
+        {h:"Spaniola canariană — ce e diferit", body:"<ul><li><b>„Guagua\"</b> = autobuz. Nu „autobús\". Localnicii spun mereu guagua.</li><li>Nu se folosește „vosotros\" — se spune <b>„ustedes\"</b> pentru „voi\"</li><li><b>„S\" final se aspiră:</b> „las casas\" sună aproape „lah casah\"</li><li><b>„Papa\"</b> = cartof (nu „patata\")</li><li><b>„Chachi\"</b> = super, mișto</li></ul>"},
+        {h:"De bază", table:{cols:["Română","Spaniolă"],rows:[
+          ["Bună ziua","Buenos días"],["Bună seara","Buenas tardes"],["Mulțumesc","Gracias"],
+          ["Vă rog","Por favor"],["Scuzați-mă","Perdone / Disculpe"],
+          ["Nu vorbesc spaniolă","No hablo español"],["Vorbiți engleză?","¿Habla inglés?"],
+          ["Nu înțeleg","No entiendo"],["Mai rar, vă rog","Más despacio, por favor"]]}},
+        {h:"La restaurant", table:{cols:["Română","Spaniolă"],rows:[
+          ["O masă pentru unu","Una mesa para uno, por favor"],
+          ["Meniul, vă rog","La carta, por favor"],
+          ["Ce recomandați?","¿Qué me recomienda?"],
+          ["Ce pește e proaspăt azi?","¿Qué pescado fresco tienen hoy?"],
+          ["Meniul zilei","El menú del día"],
+          ["O porție mică","Una media ración"],
+          ["Apă plată / minerală","Agua sin gas / con gas"],
+          ["Vin de casă","Vino de la casa"],
+          ["Nota, vă rog","La cuenta, por favor"],
+          ["Acceptați card?","¿Aceptan tarjeta?"]]},
+         notes:[{k:"tip",t:"„¿Qué pescado fresco tienen hoy?\" e cea mai utilă frază din listă. Ce e proaspăt azi e mereu mai bun decât ce e pe meniu."}]},
+        {h:"Transport", table:{cols:["Română","Spaniolă"],rows:[
+          ["Unde e stația de autobuz?","¿Dónde está la parada de guaguas?"],
+          ["Merge această guagua la…?","¿Esta guagua va a…?"],
+          ["Un bilet până la…","Un billete para…, por favor"],
+          ["Care e ultima cursă?","¿Cuál es la última guagua?"],
+          ["Mă anunțați când ajungem?","¿Me avisa cuando lleguemos?"],
+          ["Unde pot parca?","¿Dónde puedo aparcar?"]]}},
+        {h:"Pe traseu și la plajă", table:{cols:["Română","Spaniolă"],rows:[
+          ["Traseul e deschis?","¿El sendero está abierto?"],
+          ["Cât durează?","¿Cuánto tiempo se tarda?"],
+          ["Se poate înota aici?","¿Se puede nadar aquí?"],
+          ["Sunt curenți?","¿Hay corrientes?"],
+          ["Piscinele sunt deschise?","¿Las piscinas están abiertas?"]]}},
+        {h:"Urgențe", table:{cols:["Română","Spaniolă"],rows:[
+          ["Ajutor!","¡Ayuda!"],["Am nevoie de un doctor","Necesito un médico"],
+          ["Unde e farmacia?","¿Dónde está la farmacia?"],["M-am pierdut","Me he perdido"]]},
+         notes:[{k:"warn",t:"Numărul unic de urgență: 112. Funcționează în toată UE, se vorbește și engleză."}]},
+        {h:"Vocabular de meniu", table:{cols:["Spaniolă","Română"],rows:[
+          ["Papas","Cartofi"],["Carne de cabra","Capră"],["Conejo","Iepure"],["Cochino / cerdo","Porc"],
+          ["Ternera","Vită"],["Pollo","Pui"],["Pescado","Pește"],["Vieja","Peștele-papagal local"],
+          ["Cherne","Pește alb local"],["Gambas","Creveți"],["Pulpo","Caracatiță"],["Queso","Brânză"],
+          ["A la plancha","La plită"],["A la brasa","La jar"],["Frito","Prăjit"],["Picante","Picant"],["Postre","Desert"]]}}
+      ]
+    },
+    {
+      id:"deschidere", em:"📱", name:"Cum folosești ghidul",
+      blurb:"Instalare, salvare, ce se pierde",
+      lede:"Ghidul e un singur fișier care funcționează fără internet. Pe iPhone are nevoie de un pas în plus ca să pornească.",
+      sections:[
+        {h:"Pe iPhone", body:"<b>Nu deschide fișierul direct din aplicația Fișiere.</b> Previzualizatorul iOS nu rulează JavaScript, așa că pagina apare goală, doar cu bara de jos.<br><br><b>Varianta recomandată:</b> deschide ghidul ca link în Safari, apoi <b>Share → Add to Home Screen</b>. Îți apare ca aplicație pe ecranul principal, cu iconiță, și merge offline după prima deschidere.<br><br><b>Dacă vrei fișierul local:</b> instalează aplicația <b>Documents</b> (Readdle, gratuită), pune fișierul acolo și deschide-l din browserul ei.",
+         notes:[{k:"warn",t:"Nu merge: dublu-click în Fișiere, deschiderea dintr-un atașament de email, sau previzualizarea din WhatsApp și Telegram. Toate folosesc același previzualizator fără JavaScript."}]},
+        {h:"Pe Android", body:"Descarci fișierul și îl deschizi cu Chrome. Funcționează direct. Pentru iconiță pe ecranul principal: meniul Chrome → Adaugă la ecranul de pornire."},
+        {h:"Ce se salvează", body:"<ul><li>Planul pe zile și datele scrise de tine</li><li>Bifele din checklist-uri (bagaj, rezervări)</li><li>Activitățile marcate ca făcute</li><li>Pozele adăugate de tine</li><li>Tema aleasă</li></ul>Totul rămâne pe telefonul tău, nu pleacă nicăieri.",
+         notes:[{k:"warn",t:"Datele sunt legate de locul de unde deschizi ghidul. Dacă primești o versiune nouă sau îl deschizi de pe alt link, planul și bifele nu se transferă automat."}]},
+        {h:"Pozele", body:"Pe pagina fiecărei activități, apeși butonul din colțul imaginii de sus și alegi o poză de pe telefon. Se redimensionează automat și se salvează local.<br><br>Activitățile fără poză păstrează ilustrația desenată. Poți înlocui oricând.",
+         notes:[{k:"tip",t:"După vacanță, înlocuiește tot cu pozele tale. Ghidul devine și album."}]},
+        {h:"Fără internet", body:"Toate activitățile, paginile practice, harta, glosarul și căutarea funcționează offline.<br><br>Au nevoie de internet doar: linkurile externe, butoanele „Deschide în Google Maps\", și fonturile la prima încărcare (fără ele arată puțin diferit, dar funcționează)."}
+      ]
+    }
+  ],
+  /* Glosar. Termenii se marchează automat în text și se pot apăsa. */
+  glossary: [
+    { t:"guachinche", d:"Tavernă rurală canariană. Originar, o casă de țară unde producătorul își vindea vinul propriu, cu mâncare simplă de casă alături. Meniu scurt, uneori doar spus verbal, prețuri mici, adesea numai cash. Sunt instituția gastronomică a nordului Tenerifei." },
+    { t:"mojo", d:"Sosul canarian de bază, servit la aproape orice. <b>Mojo rojo</b> e roșu și picant, făcut cu ardei uscat, usturoi și chimen. <b>Mojo verde</b> e mai blând, cu coriandru sau pătrunjel, și merge mai ales la pește." },
+    { t:"gofio", d:"Făină din cereale prăjite (grâu, porumb sau orz), ingredient de bază încă din perioada pre-hispanică. Se pune în ciorbe, în deserturi, în lapte, sau se folosește ca înveliș la brânză prăjită." },
+    { t:"papas arrugadas", d:"Cartofi mici fierți în apă foarte sărată până li se zbârcește coaja, care rămâne acoperită cu un strat fin de sare. Se mănâncă cu coajă cu tot, cu mojo. Felul cel mai tipic canarian." },
+    { t:"barraquito", d:"Cafeaua emblematică a insulei, servită în pahar, cu straturi vizibile: lapte condensat, licor 43, espresso, lapte spumat, coajă de lămâie și scorțișoară. Cerut „completo\" vine cu alcool; „sin alcohol\" fără." },
+    { t:"quesillo", d:"Flanul canarian — cremă de ou caramelizată, mai densă și mai cremoasă decât varianta spaniolă continentală. Desertul standard de după masă." },
+    { t:"flan", d:"Cremă de ou coaptă, cu sos de caramel deasupra. În Canare se numește de obicei <b>quesillo</b> și e mai densă decât în restul Spaniei." },
+    { t:"ron miel", d:"Rom cu miere, băut ca digestiv după masă. Dulce, cu tărie moderată, produs local. Se găsește peste tot și e un suvenir bun." },
+    { t:"bienmesabe", d:"Cremă densă de migdale măcinate, ou, zahăr și lămâie. Se mănâncă singură sau peste înghețată. Numele înseamnă literal „bine îmi are gust\"." },
+    { t:"tapa", d:"Porție mică de mâncare, servită la bar. <b>Atenție:</b> în Canare tapas nu sunt gratuite cu băutura, ca în Andaluzia — se comandă și se plătesc separat, 3–8 € porția." },
+    { t:"ración", d:"Porție mare, gândită pentru împărțit între mai mulți. Dacă ești singur, cere <b>media ración</b> — jumătate de porție." },
+    { t:"merienda", d:"Gustarea de după-amiază, între 17:00 și 19:00. Cafea plus ceva dulce. E momentul în care bucătăriile serioase sunt închise, deci nu căuta o masă adevărată atunci." },
+    { t:"guagua", d:"Autobuz, în spaniola canariană. Se pronunță „gua-gua\". Localnicii nu spun „autobús\". Dacă întrebi de o stație, cere „la parada de guaguas\"." },
+    { t:"calima", d:"Masă de aer cald și praf venită din Sahara. Aduce ceață galbenă, vizibilitate redusă și temperaturi ridicate. Durează de obicei 2–4 zile. Mai frecventă iarna și primăvara." },
+    { t:"laurisilva", d:"Pădure de laur — ecosistem subtropical umed care exista în Europa înainte de glaciațiuni și a supraviețuit doar în Canare, Madeira și Azore. Cea din Anaga e printre cele mai bine păstrate." },
+    { t:"mirador", d:"Punct de belvedere amenajat, de obicei la marginea drumului, cu parcare și balustradă. Tenerife are zeci, iar cele mai bune sunt marcate în ghid." },
+    { t:"barranco", d:"Ravenă sau canion adânc săpat de apă în roca vulcanică. Barranco de Masca e cel mai cunoscut de pe insulă." },
+    { t:"caserío", d:"Cătun, grup mic de case izolate. Benijo și Chinamada sunt caseríos — câteva zeci de locuitori, fără magazine." },
+    { t:"drago", d:"Dragonier (Dracaena draco), arborele-simbol al Canarelor. Seva lui roșie a fost numită „sângele dragonului\". Cel din Icod are între 800 și 1.000 de ani." },
+    { t:"bodega", d:"Cramă sau prăvălie de vinuri. Multe acceptă vizitatori pentru degustări, uneori fără programare." },
+    { t:"vieja", d:"Peștele-papagal canarian, cel mai apreciat pește local. Carne albă, fermă. Se servește de obicei întreg, la grătar sau fiert cu papas." },
+    { t:"cherne", d:"Pește alb local din familia bibanului de mare, foarte apreciat. Se servește la grătar sau în tocană." },
+    { t:"Starlight", d:"Certificare internațională pentru zone cu cer nocturn de calitate excepțională. Parcul Teide o are datorită altitudinii, aerului uscat și poluării luminoase minime." }
+  ],
+
+  /* Categorii de locuri (mâncare și cumpărături). */
+  placeCats: [
+    { id:"cafe",   name:"Cafea de specialitate", icon:"cup",    cls:"lava",
+      lede:"Insula e plină de cafenele, dar foarte puține fac cafea de specialitate. Astea sunt cele care prăjesc propria cafea sau lucrează cu boabe bune." },
+    { id:"bakery", name:"Patiserii și mic dejun", icon:"bread",  cls:"town",
+      lede:"Micul dejun spaniol e mic: tostada cu roșii sau ulei, plus cafea. Dacă vrei ceva mai consistent, patiseriile de mai jos merită drumul." },
+    { id:"food",   name:"Restaurante",            icon:"fork",   cls:"nature",
+      lede:"Ordonate pe zone, ca să le potrivești cu activitatea zilei. Prânzul e 13:30–15:30, cina după 20:30." },
+    { id:"shop",   name:"Supermarket și piețe",   icon:"basket", cls:"beach",
+      lede:"Pentru mese gătite singur și pentru produse locale la preț normal, nu turistic." }
+  ],
+
+  places: [
+    /* ── Cafea de specialitate ─────────────────────────────── */
+    { t:"cafe", n:"Slow Coffee Tenerife", area:"Puerto de la Cruz",
+      addr:"C. Agustín de Betancourt 19", coord:"28.41598,-16.54896", star:"4,9",
+      tip:"Singura cafenea de specialitate din Puerto și își prăjește propria cafea. Cere <b>batch brew</b> sau un filtru din boabele lor; lucrează și cu roasterii europeni ca DAK. Vinde boabe la pachet, dacă vrei să duci acasă.",
+      when:"Zilnic 10:00–16:00 (până la 14:30 luni, marți, duminică)" },
+    { t:"cafe", n:"Slow Coffee La Orotava", area:"La Orotava",
+      addr:"Centrul istoric", coord:"28.3915,-16.5226", star:"—",
+      tip:"A doua locație a acelorași oameni. Dacă faci ziua de La Orotava, e oprirea firească de dimineață înainte de centrul vechi.",
+      when:"Verifică programul pe Google Maps" },
+    { t:"cafe", n:"coffeeURBANroasters", area:"La Laguna",
+      addr:"C. San Agustín 65", coord:"28.49035,-16.31775", star:"4,7",
+      tip:"Pe strada cu cele mai frumoase case coloniale. Prăjitorie proprie, deschisă recent. Cornulețele cu scorțișoară și fursecurile sunt făcute în casă.",
+      when:"9:30–20:00, joi–sâmbătă până la 21:00, duminică 10:00–17:00" },
+    { t:"cafe", n:"AHUL coffee", area:"La Laguna",
+      addr:"C. Bencomo 20", coord:"28.48906,-16.31554", star:"4,8",
+      tip:"Cortado foarte bine extras, plus bowls și toast-uri pentru mic dejun. Se poate intra cu câine. Spațiu mic — evită orele de vârf dacă vrei loc.",
+      when:"Miercuri–duminică 9:00–15:00. <b>Închis luni și marți.</b>" },
+    { t:"cafe", n:"We The North", area:"La Laguna și Santa Cruz",
+      addr:"C. Núñez de la Peña 15 · Emilio Calzadilla 6", coord:"28.48853,-16.31832", star:"4,3",
+      tip:"Două locații, selecție largă de boabe și metode: V60, Chemex, batch. Cea din Santa Cruz are terasă pe o stradă pietonală liniștită.",
+      when:"Zilnic 8:00–20:30/21:00" },
+    { t:"cafe", n:"La Escala", area:"Santa Cruz",
+      addr:"C. Santo Domingo 7", coord:"28.46516,-16.24924", star:"4,6",
+      tip:"Prăjitorie proprie plus bucătărie bună — te întreabă din ce boabe vrei cafeaua. Merge și ca prânz dacă faci ziua de Santa Cruz. Churros lăudați constant.",
+      when:"9:30–15:30/16:30, vineri și sâmbătă până la 23:30" },
+
+    /* ── Patiserii și mic dejun ────────────────────────────── */
+    { t:"bakery", n:"La Casa del Panadero", area:"Puerto de la Cruz",
+      addr:"C. la Hoya 23", coord:"28.41682,-16.54667", star:"4,8",
+      tip:"Cea mai bună patiserie artizanală din oraș. <b>Croissantul cu fistic</b> e cel mai lăudat, dar și cel simplu e la nivel. Deschide la 7:30 — bun dacă pleci devreme spre Anaga sau Teide.",
+      when:"Zilnic 7:30–15:30" },
+    { t:"bakery", n:"Boutique Relieve", area:"Puerto de la Cruz",
+      addr:"C. Luis de la Cruz 3A", coord:"28.41615,-16.54930", star:"4,6",
+      tip:"Fac ciocolată <b>bean to bar</b> pe loc, primii din Canare. Înghețata are arome locale: <b>gofio</b> și <b>timba</b>. Bun și pentru tostadas dimineața.<br>Verifică nota de plată — apar reclamații că prețurile de pe meniu nu se potrivesc cu bonul.",
+      when:"Zilnic 7:30–21:30" },
+    { t:"bakery", n:"Panadería La Familia", area:"Puerto de la Cruz",
+      addr:"Av. Familia de Betancourt y Molina 14a", coord:"28.41563,-16.54546", star:"4,7",
+      tip:"Mai mică și mai liniștită. Prăjitura cu miere e specialitatea, iar bocadillo-ul cu jamón și brânză e cel mai bun mic dejun sărat din zonă.",
+      when:"Marți–duminică 10:00–20:00. <b>Închis luni.</b>" },
+    { t:"bakery", n:"El Aderno", area:"Puerto de la Cruz",
+      addr:"Av. Marqués de Villanueva del Prado 11c", coord:"28.41337,-16.53815", star:"4,3",
+      tip:"Casă de patiserie canariană cunoscută pe toată insula, originară din Buenavista. Terasă acoperită, nefumători. Bun pentru <b>merienda</b> (cafea plus ceva dulce, pe la 17:00–19:00).",
+      when:"Zilnic 9:30–18:30" },
+
+    /* ── Restaurante ───────────────────────────────────────── */
+    { t:"food", n:"Mesón Los Gemelos", area:"Puerto de la Cruz",
+      addr:"C. el Peñón 4", coord:"28.41548,-16.55281", star:"4,4",
+      tip:"Bucătărie canariană de casă, foarte căutată de localnici. <b>Platoul de pește la grătar</b> (~30 €) ajunge pentru doi. Flanul de brânză e lăudat constant.<br>Nu se rezervă: scrii-ți numele pe lista de la ușă și aștepți. 20 min la prânz, poate mai mult seara.",
+      when:"12:00–22:30. <b>Închis marți și miercuri.</b>" },
+    { t:"food", n:"Casa Pachê", area:"Puerto de la Cruz",
+      addr:"C. de la Verdad 6", coord:"28.41639,-16.55248", star:"4,7",
+      tip:"Pe o străduță lăturalnică, ascuns între flori — ușor de ratat. Preparate canariene, aproape tot meniul fără gluten. Încearcă <b>brânza la grătar cu mojo</b> și banana coaptă la desert.",
+      when:"12:30–15:30 și 18:00–21:00. <b>Închis marți și miercuri.</b>" },
+    { t:"food", n:"Casa Canaria", area:"Puerto de la Cruz",
+      addr:"C. Beneharo 2, lângă biserică", coord:"28.41024,-16.56507", star:"4,0",
+      tip:"Local de cartier, plin de localnici, cu meniu larg și prețuri mici. Bun pentru o masă simplă fără planificare. Seara, de pe terasă se vede Teide.",
+      when:"Zilnic, program lung (de la 6:00 sau 11:00, până la 20:00–22:00)" },
+    { t:"food", n:"Cañada de Garachico", area:"Garachico",
+      addr:"Av. Tomé Cano", coord:"28.37273,-16.76582", star:"4,7",
+      tip:"Cel mai bine notat din Garachico, cu vedere la ocean. <b>Queso rebozado con gofio</b> (brânză în crustă de gofio) și bacalao sunt preparatele de cerut.<br>Se intră pe listă de așteptare la fața locului — la prânz poate dura o oră.",
+      when:"Miercuri–duminică 13:00–21:30/22:30. <b>Închis luni și marți.</b>" },
+    { t:"food", n:"Tasca El Muelle Viejo", area:"Garachico",
+      addr:"Av. República de Venezuela 17", coord:"28.37196,-16.76697", star:"4,6",
+      tip:"Mai mic și mai ascuns decât vecinii de pe faleză. Pește bun, brânză de capră cu mojo, ceafă de porc cu ceapă caramelizată. Termină cu un barraquito.",
+      when:"Marți–sâmbătă 13:30–22:30. <b>Închis luni și duminică.</b>" },
+    { t:"food", n:"El Caletón", area:"Garachico",
+      addr:"Av. Tomé Cano 1, lângă piscinele naturale", coord:"28.37330,-16.76615", star:"4,3",
+      tip:"Chiar lângă piscinele naturale — opțiunea firească după baie. Poziția e cea mai bună din oraș, prețurile puțin peste medie. Scoici și caracatiță bune.",
+      when:"Zilnic 12:00–21:00" },
+    { t:"food", n:"Casa Paca", area:"Benijo (Anaga)",
+      addr:"Caserío Benijo 8", coord:"28.57269,-16.18730", star:"4,5",
+      tip:"Condus de o doamnă în vârstă, într-un sistem numai al lui: <b>comanzi la bar și îți strângi singur masa</b>. Caracatița e uriașă, porțiile generoase, papas arrugadas cele mai bune din zonă. Nu se vorbește engleză.",
+      when:"Zilnic 10:00–21:00" },
+    { t:"food", n:"El Frontón", area:"Benijo (Anaga)",
+      addr:"Pista al Draguillo 1", coord:"28.57444,-16.18769", star:"4,1",
+      tip:"Balcon cu vedere spre Roques de Anaga. Pește și fructe de mare foarte proaspete, caracatiță fiartă excelentă. Atmosfera e modestă, mâncarea nu.",
+      when:"Miercuri–duminică. <b>Închis luni și marți.</b>" },
+    { t:"food", n:"El Mirador de Benijo", area:"Benijo (Anaga)",
+      addr:"Caserío Benijo 1", coord:"28.57469,-16.18845", star:"4,3",
+      tip:"Terasă mică, doar 5–6 locuri, cu cea mai bună priveliște dintre cele trei. Supa de pește și sardinele sunt punctele forte. Vino pe vreme calmă — bate vânt tare.",
+      when:"Zilnic 11:30–17:00" },
+    { t:"food", n:"Rincón Lagunero", area:"La Laguna",
+      addr:"C. Herradores 110", coord:"28.48998,-16.31991", star:"4,3",
+      tip:"Tapas canariene în inima zonei de seară. <b>Ciupercile la usturoi</b>, croquetas de jamón, churros de pescado și carnea de capră. Prețuri mici, atmosferă informală. Are și barraquito bun.",
+      when:"Zilnic 6:00–24:00" },
+    { t:"food", n:"La Reserva", area:"La Laguna",
+      addr:"C. Herradores 107", coord:"28.48991,-16.31998", star:"4,4",
+      tip:"Dacă vrei o masă mai atentă într-o seară: bar de vinuri cu selecție mare de vinuri locale și recomandări bune. Croquetas și rață confiată.",
+      when:"Zilnic de la 12:30, vineri și sâmbătă până la miezul nopții" },
+
+    /* ── Supermarket și piețe ──────────────────────────────── */
+    { t:"shop", n:"Mercadona — CC Martiánez", area:"Puerto de la Cruz",
+      addr:"Av. Aguilar y Quesada, în centrul comercial", coord:"28.41545,-16.54328", star:"4,3",
+      tip:"Cel mai aproape de centru. Pentru mesele gătite singur și pentru produse canariene la preț normal: <b>mojo, gofio, miere, vin local</b> — aceleași ca în magazinele de suveniruri, la jumătate de preț.<br><b>Închis duminica.</b> Unele case nu acceptă cash.",
+      when:"Luni–sâmbătă 9:00–21:30" },
+    { t:"shop", n:"Mercadona — Camino Carril", area:"Puerto de la Cruz (sud)",
+      addr:"Cmo Carril 65a", coord:"28.39640,-16.55738", star:"4,2",
+      tip:"Mai mare, cu parcare — util dacă ai mașină. Raionul de pește e foarte bun: îți curăță și filetează peștele întreg pe loc.",
+      when:"Luni–sâmbătă 9:00–21:30. <b>Închis duminica.</b>" },
+    { t:"shop", n:"Piața municipală", area:"Puerto de la Cruz",
+      addr:"Av. Blas Pérez González 4", coord:"28.41015,-16.55336", star:"3,8",
+      tip:"Trei etaje, cu magazine deschise zilnic. <b>Miercurea și sâmbăta</b> se adaugă piața de vechituri și produse locale (10:00–14:00), <b>duminica</b> târgul de artizanat. Parcare subterană două ore gratuit — bun de știut pe ploaie.",
+      when:"Luni–sâmbătă 8:00–21:00, duminică 8:00–17:00" },
+    { t:"shop", n:"Mercado de Nuestra Señora de África", area:"Santa Cruz",
+      addr:"Av. de San Sebastián 51", coord:"28.46310,-16.25240", star:"4,5",
+      tip:"Cea mai frumoasă piață de pe insulă, în stil colonial. Brânzeturi de capră, miere, flori, fructe. Combină-o cu ziua de Santa Cruz — dar vino <b>dimineața</b>, după-amiaza se golește.",
+      when:"Dimineața, în general până la 14:00" }
+  ],
+
+  /* Linkuri utile. Se deschid în browser. */
+  links: [
+    { g:"Rezervări",
+      items:[
+        { em:"⛰️", t:"Permis vârf Teide", d:"Tenerife ON — gratuit, se epuizează", u:"https://www.tenerifeon.es" },
+        { em:"🚡", t:"Telecabina Teide", d:"volcanoteide.com — rezervare online", u:"https://www.volcanoteide.com" },
+        { em:"🏞️", t:"Rezervări parcuri naționale", d:"Sistemul oficial spaniol", u:"https://www.reservasparquesnacionales.es" },
+        { em:"🥾", t:"Barranco de Masca", d:"Traseul prin canion — rezervare obligatorie", u:"https://www.reservasmasca.com" },
+        { em:"🦜", t:"Loro Parque", d:"Bilete online, mai ieftin decât la casă", u:"https://www.loroparque.com" }
+      ]},
+    { g:"Transport",
+      items:[
+        { em:"🚌", t:"TITSA", d:"Orare și rute autobuz (guaguas)", u:"https://www.titsa.com" },
+        { em:"🚋", t:"Tranvía Tenerife", d:"Tramvaiul Santa Cruz ↔ La Laguna", u:"https://www.tranviatenerife.com" },
+        { em:"🚗", t:"Cicar", d:"Închirieri auto locale, asigurare inclusă", u:"https://www.cicar.com" },
+        { em:"🚗", t:"Autoreisen", d:"Alternativă locală, fără depozit blocat", u:"https://www.autoreisen.com" },
+        { em:"✈️", t:"Aeroporturi Tenerife", d:"Aena — sosiri, plecări, transferuri", u:"https://www.aena.es" }
+      ]},
+    { g:"Vremea și marea",
+      items:[
+        { em:"🌤️", t:"AEMET", d:"Prognoza oficială, radar pe zone", u:"https://www.aemet.es" },
+        { em:"🏔️", t:"AEMET — Parcul Teide", d:"Prognoză specifică pentru altitudine", u:"https://www.aemet.es/es/eltiempo/prediccion/montana" },
+        { em:"📹", t:"Webcamuri Tenerife", d:"Vezi cerul în timp real înainte să pleci", u:"https://www.skylinewebcams.com/es/webcam/espana/canarias/santa-cruz-de-tenerife.html" },
+        { em:"🌊", t:"Starea mării", d:"Predicción marítima AEMET", u:"https://www.aemet.es/es/eltiempo/prediccion/maritima" }
+      ]},
+    { g:"Trasee și natură",
+      items:[
+        { em:"🥾", t:"Wikiloc — Tenerife", d:"Trasee GPS descărcabile offline", u:"https://www.wikiloc.com/trails/outdoor/spain/canarias/tenerife" },
+        { em:"🌲", t:"Senderos de Tenerife", d:"Rețeaua oficială de trasee a Cabildo", u:"https://www.tenerifeon.es/senderos" },
+        { em:"🗺️", t:"Organic Maps", d:"Hărți offline — esențial pentru Anaga", u:"https://organicmaps.app" }
+      ]},
+    { g:"Planificare",
+      items:[
+        { em:"🏨", t:"Booking — Puerto de la Cruz", d:"Cazare în zona recomandată", u:"https://www.booking.com/city/es/puerto-de-la-cruz.html" },
+        { em:"🍽️", t:"Guachinches Tenerife", d:"Listă și program actualizat", u:"https://guachinchestenerife.com" },
+        { em:"ℹ️", t:"Turismo de Tenerife", d:"Site-ul oficial de turism al insulei", u:"https://www.webtenerife.com" }
+      ]}
+  ],
+
+  /* Conturul insulei pentru harta desenată (lat, lng). */
+  outline: [
+    [28.343,-16.925],[28.371,-16.878],[28.378,-16.836],[28.372,-16.766],[28.370,-16.717],
+    [28.390,-16.646],[28.412,-16.560],[28.425,-16.500],[28.470,-16.420],[28.510,-16.360],
+    [28.572,-16.318],[28.578,-16.245],[28.567,-16.186],[28.540,-16.145],[28.500,-16.195],
+    [28.470,-16.248],[28.420,-16.302],[28.380,-16.343],[28.330,-16.375],[28.260,-16.412],
+    [28.180,-16.450],[28.100,-16.512],[28.030,-16.545],[28.000,-16.606],[28.020,-16.667],
+    [28.050,-16.720],[28.090,-16.760],[28.125,-16.786],[28.180,-16.800],[28.240,-16.842],
+    [28.290,-16.870],[28.320,-16.900]
+  ]
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   CODUL APLICAȚIEI — nu se modifică pentru altă destinație
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Pictograme pentru categorii */
+const ICONS = {
+  mountain:'<path d="M3 19l6.5-11 4 6 2.5-4L21 19z"/><circle cx="8" cy="6" r="2"/>',
+  wave:'<path d="M2 9c2.5 0 2.5 2.5 5 2.5S9.5 9 12 9s2.5 2.5 5 2.5S19.5 9 22 9"/><path d="M2 15c2.5 0 2.5 2.5 5 2.5s2.5-2.5 5-2.5 2.5 2.5 5 2.5 2.5-2.5 5-2.5"/>',
+  town:'<path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V12h6v9"/><path d="M7 21v-5h4v5"/>',
+  boat:'<path d="M3 17.5l1.8-5.5h14.4L21 17.5"/><path d="M12 12V4l6 4-6 1"/><path d="M2.5 20.5c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/>',
+  book:'<path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+  cup:'<path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h2.2a2.3 2.3 0 0 1 0 4.6H17"/><path d="M7.5 2.5v2.2M11 2.5v2.2M14.5 2.5v2.2"/>',
+  bread:'<path d="M4 10a3.5 3.5 0 0 1 3.5-3.5h9A3.5 3.5 0 0 1 20 10v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M9 6.5V20M14 6.5V20"/>',
+  fork:'<path d="M6 2.5v6a2.5 2.5 0 0 0 5 0v-6"/><path d="M8.5 11v10.5"/><path d="M17.5 2.5c-1.6 1-2.5 3-2.5 5.5s.9 3.5 2.5 3.5V21.5"/>',
+  basket:'<path d="M3 9h18l-1.6 9.2a2 2 0 0 1-2 1.8H6.6a2 2 0 0 1-2-1.8z"/><path d="M8 9l2.5-5.5M16 9l-2.5-5.5"/><path d="M10 13v3M14 13v3"/>',
+  cloud:'<circle cx="8.5" cy="7" r="3.2"/><path d="M8.5 3.2V1.6M4.6 7H3M5.4 4l-1.1-1.1M12.2 4L13.3 2.9"/><path d="M8 20.5a4.4 4.4 0 0 1 .5-8.77 5.7 5.7 0 0 1 10.8 1.4A3.9 3.9 0 0 1 18.6 20.5z"/>'
+};
+
+/* Scene grafice pentru capul fiecărei activități — desenate, fără fișiere externe */
+const SCENES = {
+  volcano:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a3bg)"/>
+    <path d="M0 ${h} L${w*.22} ${h*.52} L${w*.31} ${h*.66} L${w*.44} ${h*.18} L${w*.5} ${h*.28} L${w*.58} ${h*.14} L${w*.78} ${h*.6} L${w} ${h*.44} L${w} ${h} Z" fill="var(--a4)" opacity=".5"/>
+    <path d="M0 ${h} L${w*.3} ${h*.72} L${w*.5} ${h*.86} L${w*.72} ${h*.62} L${w} ${h*.8} L${w} ${h} Z" fill="var(--ink2)" opacity=".35"/>
+    <circle cx="${w*.82}" cy="${h*.26}" r="${h*.13}" fill="var(--a3)" opacity=".75"/></svg>`,
+  forest:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a2bg)"/>
+    <path d="M0 ${h} L${w*.14} ${h*.34} L${w*.28} ${h} Z M${w*.2} ${h} L${w*.36} ${h*.2} L${w*.52} ${h} Z M${w*.44} ${h} L${w*.6} ${h*.38} L${w*.76} ${h} Z M${w*.68} ${h} L${w*.85} ${h*.22} L${w} ${h} Z" fill="var(--a2)" opacity=".55"/>
+    <path d="M0 ${h*.72} q${w*.25} ${-h*.2} ${w*.5} 0 q${w*.25} ${h*.2} ${w*.5} 0 L${w} ${h} L0 ${h} Z" fill="var(--a2)" opacity=".3"/></svg>`,
+  coast:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a1bg)"/>
+    <path d="M0 ${h*.62} L${w*.18} ${h*.2} L${w*.34} ${h*.66} L${w*.52} ${h*.38} L${w*.68} ${h*.7} L${w} ${h*.5} L${w} ${h} L0 ${h} Z" fill="var(--ink2)" opacity=".4"/>
+    <path d="M0 ${h*.82} q${w*.2} ${-h*.12} ${w*.4} 0 q${w*.2} ${h*.12} ${w*.4} 0 q${w*.1} ${-h*.06} ${w*.2} 0 L${w} ${h} L0 ${h} Z" fill="var(--a1)" opacity=".5"/></svg>`,
+  town:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--surf2)"/>
+    <g fill="var(--a3)" opacity=".5">
+      <rect x="${w*.06}" y="${h*.46}" width="${w*.12}" height="${h*.54}"/>
+      <rect x="${w*.22}" y="${h*.3}" width="${w*.1}" height="${h*.7}"/>
+      <rect x="${w*.36}" y="${h*.54}" width="${w*.14}" height="${h*.46}"/>
+      <rect x="${w*.54}" y="${h*.22}" width="${w*.09}" height="${h*.78}"/>
+      <rect x="${w*.67}" y="${h*.5}" width="${w*.13}" height="${h*.5}"/>
+      <rect x="${w*.84}" y="${h*.38}" width="${w*.1}" height="${h*.62}"/></g>
+    <path d="M${w*.5} ${h*.22} l${w*.045} ${-h*.14} l${w*.045} ${h*.14} Z" fill="var(--a4)" opacity=".5"/></svg>`,
+  night:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a2bg)"/>
+    <g fill="var(--a2)" opacity=".85">
+      ${[[.08,.22,1.3],[.17,.5,.9],[.26,.16,1.6],[.34,.62,1],[.43,.3,1.2],[.52,.12,.9],
+         [.61,.46,1.5],[.68,.24,1],[.76,.56,1.1],[.84,.18,1.4],[.92,.4,.9],[.13,.72,1],
+         [.47,.68,1.2],[.72,.72,.9],[.95,.66,1.1]]
+        .map(([x,y,r])=>`<circle cx="${w*x}" cy="${h*y}" r="${r}"/>`).join("")}
+    </g>
+    <path d="M0 ${h} L${w*.3} ${h*.62} L${w*.44} ${h*.78} L${w*.58} ${h*.5} L${w*.78} ${h*.8} L${w} ${h*.66} L${w} ${h} Z"
+      fill="var(--ink)" opacity=".55"/></svg>`,
+  beach:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a3bg)"/>
+    <path d="M0 0 L${w} 0 L${w} ${h*.44} L0 ${h*.5} Z" fill="var(--a2)" opacity=".35"/>
+    <path d="M0 ${h*.5} q${w*.16} ${-h*.1} ${w*.32} 0 q${w*.16} ${h*.1} ${w*.32} 0 q${w*.16} ${-h*.1} ${w*.36} 0 L${w} ${h} L0 ${h} Z"
+      fill="var(--a3)" opacity=".45"/>
+    <g stroke="var(--a1)" stroke-width="1.8" fill="none" opacity=".6">
+      <path d="M${w*.16} ${h} v${-h*.4}"/><path d="M${w*.16} ${h*.6} q${-w*.05} ${-h*.12} ${-w*.09} ${-h*.06}"/>
+      <path d="M${w*.16} ${h*.6} q${w*.05} ${-h*.12} ${w*.09} ${-h*.06}"/>
+      <path d="M${w*.78} ${h} v${-h*.32}"/><path d="M${w*.78} ${h*.68} q${-w*.04} ${-h*.1} ${-w*.075} ${-h*.05}"/>
+      <path d="M${w*.78} ${h*.68} q${w*.04} ${-h*.1} ${w*.075} ${-h*.05}"/></g></svg>`,
+  sea:(w,h)=>`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${w}" height="${h}" fill="var(--a1bg)"/>
+    <g stroke="var(--a1)" fill="none" stroke-width="2" opacity=".45" stroke-linecap="round">
+      <path d="M0 ${h*.5} q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0 q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0"/>
+      <path d="M0 ${h*.72} q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0 q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0"/>
+      <path d="M0 ${h*.92} q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0 q${w*.12} ${-h*.14} ${w*.24} 0 q${w*.12} ${h*.14} ${w*.24} 0"/></g>
+    <path d="M${w*.62} ${h*.34} q${w*.07} ${-h*.16} ${w*.14} 0 q${-w*.07} ${h*.1} ${-w*.14} 0 Z" fill="var(--a1)" opacity=".55"/></svg>`
+};
+
+const KEY = "guide:" + GUIDE.destination.toLowerCase().replace(/\s+/g,"-") + ":v5";
+const NDAYS = 7;
+let state = { days:{}, dates:{}, done:{}, checks:{}, theme:null, photos:{}, custom:[] };
+/* Activitățile adăugate de utilizator stau în state.custom și se comportă
+   la fel ca cele din ghid peste tot în aplicație. */
+const ALL = () => GUIDE.blocks.concat(state.custom||[]);
+
+async function load(){
+  try{ if(window.storage && window.storage.get){
+    const r = await window.storage.get(KEY);
+    if(r && r.value){ Object.assign(state, JSON.parse(r.value)); return; } }}catch(e){}
+  try{ const v = localStorage.getItem(KEY); if(v) Object.assign(state, JSON.parse(v)); }catch(e){}
+}
+let st;
+function save(){
+  clearTimeout(st);
+  st = setTimeout(async ()=>{
+    const v = JSON.stringify(state);
+    try{ if(window.storage && window.storage.set) await window.storage.set(KEY, v); }catch(e){}
+    try{ localStorage.setItem(KEY, v); }catch(e){}
+  }, 250);
+}
+
+const app = document.getElementById("app");
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const B = id => ALL().find(b=>b.id===id);
+function backLabel(){
+  if(!hist.length) return "Înapoi";
+  const s=hist[hist.length-1];
+  if(s.detail && s.detail.startsWith("block:")){
+    const b=B(s.detail.slice(6)); return b ? (b.short||b.name) : "Înapoi"; }
+  if(s.detail && s.detail.startsWith("page:")){
+    const p=GUIDE.pages.find(x=>x.id===s.detail.slice(5)); return p ? p.name : "Înapoi"; }
+  if(s.day!==null && s.day!==undefined) return "Ziua "+(s.day+1);
+  if(s.cat){
+    if(s.cat==="__prac") return "Informații practice";
+    if(s.cat==="__all") return "Toate activitățile";
+    if(s.cat.startsWith("p:")){ const c=GUIDE.placeCats.find(x=>x.id===s.cat.slice(2)); return c?c.name:"Înapoi"; }
+    const c=GUIDE.cats.find(x=>x.id===s.cat); return c?c.name:"Înapoi"; }
+  return {plan:"Zile",explore:"Explorează",map:"Hartă",links:"Linkuri",search:"Caută"}[s.tab]||"Înapoi";
+}
+const backBar = () => `<div class="backbar"><button class="back" data-back="1">
+  <span class="ar"></span>${esc(backLabel())}</button></div>`;
+let view = { tab:"plan", detail:null, cat:null, day:null, query:"", mapSel:null };
+/* Istoric real de navigare: fiecare pas înainte salvează starea precedentă,
+   iar „înapoi" o restaurează. Rezolvă cazul activitate → combinație → înapoi. */
+let hist = [];
+const snap = () => ({tab:view.tab, detail:view.detail, cat:view.cat, day:view.day,
+                     query:view.query, mapSel:view.mapSel, y:window.scrollY});
+function go(mut){ hist.push(snap()); mut(); render(); }
+function back(){
+  if(!hist.length){ view.detail=null; view.cat=null; view.day=null; return render(); }
+  const s=hist.pop();
+  Object.assign(view,{tab:s.tab,detail:s.detail,cat:s.cat,day:s.day,query:s.query,mapSel:s.mapSel});
+  render(); requestAnimationFrame(()=>window.scrollTo(0,s.y||0));
+}
+
+/* zilele în care e pusă o activitate */
+const dayOf = id => Object.keys(state.days).find(d=>(state.days[d]||[]).includes(id));
+
+function applyTheme(){
+  const r = document.documentElement;
+  if(state.theme) r.setAttribute("data-theme", state.theme); else r.removeAttribute("data-theme");
+  const dark = state.theme==="dark" || (!state.theme && matchMedia("(prefers-color-scheme:dark)").matches);
+  document.getElementById("themeIcon").innerHTML = dark
+    ? '<path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"/>'
+    : '<circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/>';
+}
+
+/* hartă */
+const MAPW=340, MAPH=208, PAD=14;
+const bnd=(()=>{const la=GUIDE.outline.map(p=>p[0]),ln=GUIDE.outline.map(p=>p[1]);
+  return {laMin:Math.min(...la),laMax:Math.max(...la),lnMin:Math.min(...ln),lnMax:Math.max(...ln)};})();
+function proj(lat,lng){
+  return [Math.round((PAD+(lng-bnd.lnMin)/(bnd.lnMax-bnd.lnMin)*(MAPW-2*PAD))*10)/10,
+          Math.round((PAD+(bnd.laMax-lat)/(bnd.laMax-bnd.laMin)*(MAPH-2*PAD))*10)/10];
+}
+const islandSVG = () => `<polygon points="${GUIDE.outline.map(p=>proj(p[0],p[1]).join(",")).join(" ")}"
+  fill="var(--land)" stroke="var(--landln)" stroke-width="1.2" stroke-linejoin="round"/>`;
+const gmaps = b => "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent(b.mapq ? b.mapq+", Tenerife" : b.coord);
+
+/* Marchează termenii din glosar în text, o singură dată per fragment,
+   fără să atingă ce e în interiorul tagurilor HTML. */
+const GTERMS = GUIDE.glossary
+  .map((g,idx)=>({t:g.t, idx}))
+  .sort((a,b)=>b.t.length-a.t.length);
+const GRE = GTERMS.map(g=>
+  new RegExp("(?<![\\p{L}\\p{M}])("+g.t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")(?![\\p{L}\\p{M}])","iu"));
+/* Marchează termenii din glosar în text. Fiecare termen o singură dată per
+   fragment, fără să atingă ce e în interiorul tagurilor HTML. */
+function gloss(html){
+  if(!html) return html;
+  const used=new Set();
+  return String(html).split(/(<[^>]+>)/).map(seg=>{
+    if(!seg || seg.startsWith("<")) return seg;
+    GTERMS.forEach((g,i)=>{
+      if(used.has(g.idx) || !GRE[i].test(seg)) return;
+      used.add(g.idx);
+      seg=seg.replace(GRE[i],`<button class="gt" data-gloss="${g.idx}">$1</button>`);
+    });
+    return seg;
+  }).join("");
+}
+
+const notesHTML = ns => !ns ? "" : ns.map(n=>
+  `<div class="note ${n.k==="warn"?"warn":"tip"}"><b>${n.k==="warn"?"Atenție":"Pont"}:</b> ${gloss(n.t)}</div>`).join("");
+const tableHTML = t => `<div class="tblw"><table class="tbl"><thead><tr>${
+  t.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${
+  t.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+function checklistHTML(pid,si,items){
+  const n=items.filter((_,i)=>state.checks[`${pid}:${si}:${i}`]).length;
+  return `<div class="prog">${n} din ${items.length} bifate</div>`+items.map((it,i)=>{
+    const k=`${pid}:${si}:${i}`;
+    return `<button class="ck" data-check="${k}" aria-pressed="${!!state.checks[k]}">
+      <span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+      <span class="lb">${it}</span></button>`;}).join("");
+}
+const tagsHTML = b => `<span class="tag ${b.car?"car":"nocar"}">${b.car?"Mașină":"Fără mașină"}</span>
+  <span class="tag">${esc(b.dur)}</span>${b.hours?`<span class="tag">${esc(b.hours)}</span>`:""}`;
+function banner(b,w,h){
+  const own = state.photos && state.photos[b.id];
+  if(own) return `<img class="bn" src="${own}" alt="" style="height:${h}px">`;
+  if(b.photo) return `<img class="bn" src="${esc(b.photo)}" alt="" loading="lazy" style="height:${h}px">`;
+  return `<div class="bn" style="height:${h}px">${(SCENES[b.scene]||SCENES.coast)(w,h)}</div>`;
+}
+function blockCard(b, extraTag){
+  const d = dayOf(b.id);
+  return `<div class="card${state.done[b.id]?" done":""}">
+    <button class="hit" data-open="${b.id}">
+      ${banner(b,340,84)}
+      <span class="cb">
+        <span class="nm">${esc(b.name)}</span>
+        <span class="bl2">${esc(b.blurb)}</span>
+        <span class="meta">${tagsHTML(b)}${extraTag||""}
+          ${d?`<span class="tag idl">Ziua ${+d+1}</span>`:""}</span>
+      </span></button>
+    <button class="donechk" data-done="${b.id}" aria-label="Marchează ca făcut">
+      <svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></button>
+  </div>`;
+}
+
+/* ── ecranul principal: zilele ── */
+function screenPlan(){
+  const days = Array.from({length:NDAYS},(_,i)=>{
+    const ids = state.days[i]||[];
+    const has = ids.length>0;
+    return `<button class="dayb${has?" has":""}" data-day="${i}">
+      <span class="dh"><span class="dn">Ziua ${i+1}</span>
+        <span class="dt">${state.dates[i]?esc(state.dates[i]):"fără dată"}</span></span>
+      ${has?`<span class="dl">${ids.map(id=>{const b=B(id);return b?
+        `<span class="di"><span class="bl"></span>${esc(b.name)}</span>`:"";}).join("")}</span>`
+        :`<span class="de">Gol — apasă ca să adaugi</span>`}
+    </button>`;}).join("");
+  const puse = Object.values(state.days).flat().length;
+  return `<div class="shead" style="margin-top:20px"><h2>Planul sejurului</h2><span class="rule"></span>
+    <span class="cnt">${puse} din ${ALL().length}</span></div>
+    <div class="days">${days}</div>
+    <div class="foot">Zilele nu trebuie completate toate.<br>Poți muta orice activitate oricând.</div>`;
+}
+
+function screenDay(i){
+  const ids = state.days[i]||[];
+  const libere = ALL().filter(b=>!dayOf(b.id));
+  return `${backBar()}
+    <div class="hero"><h1>Ziua ${i+1}</h1></div>
+    <input class="dateinp" id="dt" type="text" placeholder="Adaugă data (ex: 15 mai)"
+      value="${state.dates[i]?esc(state.dates[i]):""}" data-dayidx="${i}">
+    ${ids.length?`<div class="shead"><h2>Planificat</h2><span class="rule"></span></div>
+      <div class="cards">${ids.map(id=>{const b=B(id);return b?blockCard(b):"";}).join("")}</div>`
+      :`<div class="empty">Nimic planificat încă.<br>Alege mai jos ce vrei să faci în ziua asta.</div>`}
+    <div class="shead"><h2>De adăugat</h2><span class="rule"></span><span class="cnt">${libere.length}</span></div>
+    ${libere.length?`<div class="cards">${libere.map(b=>`<div class="card">
+        <button class="hit" data-open="${b.id}">${banner(b,340,84)}
+          <span class="cb"><span class="nm">${esc(b.name)}</span>
+            <span class="bl2">${esc(b.blurb)}</span>
+            <span class="meta">${tagsHTML(b)}</span></span></button>
+        <div style="padding:0 18px 18px">
+          <button class="addb" data-add="${b.id}" data-to="${i}">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            Pune în ziua ${i+1}</button></div></div>`).join("")}</div>`
+      :`<div class="empty">Toate activitățile sunt deja repartizate.</div>`}`;
+}
+
+/* ── catalog pe vreme ── */
+function screenExplore(){
+  const cats = GUIDE.cats.map(c=>{
+    const n=ALL().filter(b=>b.cat===c.id).length;
+    return `<button class="cat" data-cat="${c.id}">
+      <span class="ic ic-${c.cls}"><svg viewBox="0 0 24 24">${ICONS[c.icon]}</svg></span>
+      <span><span class="nm">${esc(c.name)}</span><span class="ct">${n} activități</span></span></button>`;}).join("");
+  const pcats = GUIDE.placeCats.map(c=>{
+    const n=GUIDE.places.filter(p=>p.t===c.id).length;
+    return `<button class="cat" data-cat="p:${c.id}">
+      <span class="ic ic-${c.cls}"><svg viewBox="0 0 24 24">${ICONS[c.icon]}</svg></span>
+      <span><span class="nm">${esc(c.name)}</span><span class="ct">${n} locuri</span></span></button>`;}).join("");
+  return `<div class="shead" style="margin-top:20px"><h2>Ce vrei să faci</h2><span class="rule"></span></div>
+    <div class="grid">
+      <button class="cat" data-cat="__all">
+        <span class="ic ic-prac"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></span>
+        <span><span class="nm">Toate activitățile</span><span class="ct">${ALL().length} în total</span></span></button>
+      ${cats}${pcats}
+      <button class="cat" data-new="1">
+        <span class="ic ic-lava"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span><span class="nm">Adaugă o activitate</span><span class="ct">${(state.custom||[]).length} adăugate de tine</span></span></button>
+      <button class="cat" data-cat="__prac">
+        <span class="ic ic-prac"><svg viewBox="0 0 24 24">${ICONS.book}</svg></span>
+        <span><span class="nm">Informații practice</span><span class="ct">${GUIDE.pages.length+2} pagini</span></span></button>
+    </div>
+    <div class="foot">${esc(GUIDE.destination)} · ${esc(GUIDE.subtitle)}</div>`;
+}
+
+function screenPlaces(type){
+  const c=GUIDE.placeCats.find(x=>x.id===type), list=GUIDE.places.filter(p=>p.t===type);
+  const areas=[]; list.forEach(p=>{if(!areas.includes(p.area))areas.push(p.area);});
+  return `${backBar()}
+    <div class="hero"><h1>${esc(c.name)}</h1><p class="lede">${esc(c.lede)}</p></div>
+    ${areas.map(a=>`<div class="shead"><h2 style="font-size:1em">${esc(a)}</h2><span class="rule"></span></div>
+      ${list.filter(p=>p.area===a).map(p=>`<div class="sec">
+        <div style="display:flex;align-items:baseline;gap:9px">
+          <h3 style="flex:1;margin:0">${esc(p.n)}</h3>
+          ${p.star!=="—"?`<span class="tag" style="flex:none">★ ${esc(p.star)}</span>`:""}</div>
+        <div style="font-size:.72em;color:var(--ink3);margin:4px 0 11px">${esc(p.addr)}</div>
+        <div style="font-size:.85em;line-height:1.6;color:var(--ink2)">${gloss(p.tip)}</div>
+        ${p.when?`<div class="note tip"><b>Program:</b> ${p.when}</div>`:""}
+        <a class="maplink" style="margin-top:12px" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.n+", "+p.area+", Tenerife")}">
+          <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Vezi pe hartă</a></div>`).join("")}`).join("")}
+    <div class="foot">Programele se schimbă des — verifică pe Google Maps<br>înainte să te deplasezi.</div>`;
+}
+
+function screenCat(id){
+  if(id.startsWith("p:")) return screenPlaces(id.slice(2));
+  if(id==="__prac") return `${backBar()}
+    <div class="hero"><h1>Informații practice</h1></div>
+    <div class="rows">${GUIDE.pages.map(p=>`<button class="row" data-page="${p.id}">
+      <span class="em">${p.em}</span><span class="tx"><span class="t">${esc(p.name)}</span>
+      <span class="d">${esc(p.blurb)}</span></span><span class="ch"></span></button>`).join("")}
+      <button class="row" data-page="__data"><span class="em">💾</span>
+        <span class="tx"><span class="t">Datele mele</span>
+        <span class="d">Copie de siguranță, import, ștergere</span></span><span class="ch"></span></button>
+      <button class="row" data-page="__glossary"><span class="em">🗒️</span>
+        <span class="tx"><span class="t">Glosar</span>
+        <span class="d">${GUIDE.glossary.length} termeni spanioli și canarieni</span></span>
+        <span class="ch"></span></button></div>`;
+  const c=GUIDE.cats.find(x=>x.id===id);
+  const list = id==="__all" ? ALL() : ALL().filter(b=>b.cat===id);
+  return `${backBar()}
+    <div class="hero"><h1>${esc(c?c.name:"Toate activitățile")}</h1></div>
+    <div class="cards">${list.map(b=>blockCard(b)).join("")}</div>`;
+}
+
+function screenMap(){
+  const placed=[],dots=[],labels=[];
+  ALL().filter(b=>b.coord)
+    .map(b=>{const [la,ln]=b.coord.split(",").map(Number);const [x,y]=proj(la,ln);return {b,x,y};})
+    .sort((p,q)=>p.y-q.y).forEach(p=>{
+      const sel=view.mapSel===p.b.id;
+      const anch = p.x>MAPW*0.60 ? "end":"start", dx = anch==="end"?-10:10;
+      const txt=p.b.short||p.b.name, wide=txt.length*4.3;
+      let ly=p.y+3, g=0;
+      while(g++<16 && placed.some(q=>Math.abs(q.ly-ly)<10 && Math.abs(q.cx-p.x)<(q.w+wide)/2+14)) ly+=10;
+      placed.push({cx:p.x,ly,w:wide});
+      if(Math.abs(ly-(p.y+3))>3)
+        dots.push(`<line x1="${p.x}" y1="${p.y}" x2="${p.x+dx*.5}" y2="${ly-3}" stroke="var(--landln)" stroke-width="1"/>`);
+      dots.push(`<circle class="h${sel?" sel":""}" cx="${p.x}" cy="${p.y}" r="${sel?6:4.6}"/>`);
+      labels.push(`<g class="pin" data-pin="${p.b.id}"><circle cx="${p.x}" cy="${p.y}" r="12" fill="transparent"/>
+        <text x="${p.x+dx}" y="${ly}" text-anchor="${anch}">${esc(txt)}</text></g>`);
+    });
+  const b = view.mapSel ? B(view.mapSel) : null;
+  return `<div class="shead" style="margin-top:20px"><h2>Unde sunt</h2><span class="rule"></span></div>
+    <div class="mapbox">
+      <div class="vp" id="vp"><svg id="mapsvg" viewBox="0 0 ${MAPW} ${MAPH}" role="img"
+          aria-label="Harta Tenerife cu activitățile marcate">
+        <rect width="${MAPW}" height="${MAPH}" fill="var(--sea)" opacity=".18" rx="10"/>
+        ${islandSVG()}<g>${dots.join("")}</g><g>${labels.join("")}</g></svg></div>
+      <div class="zoomrow">
+        <button data-zoom="-1" aria-label="Micșorează">−</button>
+        <span class="lvl" id="zlvl"></span>
+        <button data-zoom="1" aria-label="Mărește">+</button>
+        <button data-zoom="0" style="flex:0 0 auto;padding-left:14px;padding-right:14px">Reset</button>
+      </div>
+      <div class="maplg">${b?"Apasă din nou pentru detalii":"Apasă un punct, sau trage și apropie degetele"}</div></div>
+    ${b?`<div style="margin-top:13px" class="cards">${blockCard(b)}</div>`:""}
+    <div class="foot">Hartă schematică, funcționează fără internet.<br>Pentru navigație, deschide locul în Google Maps din pagina lui.</div>`;
+}
+
+function screenLinks(){
+  return GUIDE.links.map(g=>`<div class="shead"><h2>${esc(g.g)}</h2><span class="rule"></span></div>
+    <div class="rows">${g.items.map(i=>`<a class="lk" href="${esc(i.u)}" target="_blank" rel="noopener">
+      <span class="em">${i.em}</span><span class="tx"><span class="t">${esc(i.t)}</span>
+      <span class="d">${esc(i.d)}</span></span>
+      <svg class="ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+      </a>`).join("")}</div>`).join("")+`<div class="foot">Linkurile au nevoie de internet.</div>`;
+}
+
+function screenSearch(){
+  const q=view.query.trim().toLowerCase();
+  let res;
+  if(q.length>=2){
+    const hits=[];
+    const mark=t=>{const pl=String(t).replace(/<[^>]+>/g," ").replace(/\s+/g," ");
+      const i=pl.toLowerCase().indexOf(q); if(i<0) return null;
+      const s=Math.max(0,i-42), e=Math.min(pl.length,i+q.length+72);
+      return (s>0?"…":"")+esc(pl.slice(s,i))+"<mark>"+esc(pl.slice(i,i+q.length))+"</mark>"+
+             esc(pl.slice(i+q.length,e))+(e<pl.length?"…":"");};
+    ALL().forEach(b=>{const m=mark([b.name,b.blurb,b.lede,
+      ...(b.timeline||[]).map(t=>t.ti+" "+t.tx),...(b.notes||[]).map(n=>n.t)].join(" "));
+      if(m) hits.push({w:"Activitate",h:b.name,s:m,go:"block:"+b.id});});
+    GUIDE.places.forEach(p=>{const m=mark([p.n,p.area,p.addr,p.tip,p.when||""].join(" "));
+      if(m){const c=GUIDE.placeCats.find(x=>x.id===p.t);
+        hits.push({w:c.name+" · "+p.area,h:p.n,s:m,go:"cat:p:"+p.t});}});
+    GUIDE.pages.forEach(p=>p.sections.forEach(s=>{
+      const m=mark([s.h,s.body||"",(s.checklist||[]).join(" "),
+        s.table?s.table.rows.flat().join(" "):"",(s.notes||[]).map(n=>n.t).join(" ")].join(" "));
+      if(m) hits.push({w:p.name,h:s.h,s:m,go:"page:"+p.id});}));
+    GUIDE.glossary.forEach(g=>{const m=mark(g.t+" "+g.d);
+      if(m) hits.push({w:"Glosar",h:g.t,s:m,go:"page:__glossary"});});
+    GUIDE.links.forEach(g=>g.items.forEach(i=>{const m=mark(i.t+" "+i.d);
+      if(m) hits.push({w:"Link · "+g.g,h:i.t,s:m,go:"tab:links"});}));
+    res = hits.length ? hits.map(h=>`<button class="hit2" data-goto="${h.go}">
+      <span class="w">${esc(h.w)}</span><span class="h">${esc(h.h)}</span>
+      <span class="s">${h.s}</span></button>`).join("")
+      : `<div class="empty">Nimic pentru „${esc(view.query)}”.</div>`;
+  } else res = `<div class="empty">Scrie minim 2 litere.<br>Caută prin activități, locuri,<br>note, prețuri și fraze.</div>`;
+  return `<div class="srch"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Caută în tot ghidul…" value="${esc(view.query)}"
+      autocomplete="off" autocapitalize="off" spellcheck="false"></div>${res}`;
+}
+
+function screenBlock(id){
+  const b=B(id); if(!b) return screenExplore();
+  const d = dayOf(b.id);
+  const tl=(b.timeline||[]).map(t=>`<li><span class="dot"></span><div class="bd">
+    <div class="hr">${esc(t.hr)}</div><div class="ti">${gloss(esc(t.ti))}</div>
+    <div class="tt">${gloss(t.tx)}</div></div></li>`).join("");
+  const cb=(b.combos||[]).map(c=>{const o=B(c.id); if(!o) return "";
+    return `<button class="combo" data-open="${c.id}"><span class="pl"></span>
+      <span class="ct2"><b>${esc(o.name)}</b> — ${esc(c.why)}</span><span class="ch"></span></button>`;}).join("");
+  let mini="";
+  if(b.coord){
+    const [la,ln]=b.coord.split(",").map(Number); const [x,y]=proj(la,ln);
+    mini=`<div class="sec"><h3>Unde e</h3>
+      <svg viewBox="0 0 ${MAPW} ${MAPH}" style="width:100%;height:auto;display:block" role="img" aria-label="Poziția pe hartă">
+        <rect width="${MAPW}" height="${MAPH}" fill="var(--sea)" opacity=".18" rx="10"/>${islandSVG()}
+        <circle cx="${x}" cy="${y}" r="13" fill="var(--a4)" opacity=".2"/>
+        <circle cx="${x}" cy="${y}" r="6" fill="var(--a4)" stroke="var(--paper)" stroke-width="2.5"/></svg>
+      <a class="maplink" style="margin-top:12px" href="${gmaps(b)}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Deschide în Google Maps</a></div>`;
+  }
+  const dayBtns = Array.from({length:NDAYS},(_,i)=>
+    `<button class="addb" style="margin-top:8px" data-add="${b.id}" data-to="${i}">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Pune în ziua ${i+1}</button>`).join("");
+  return `${backBar()}
+    <div class="hero"><h1>${esc(b.name)}</h1>
+      <div class="herobn">${banner(b,580,150).replace('class="bn"','').replace('style="height:150px"','')}
+        <button class="photobtn" data-photo="${b.id}">
+          <svg viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.2"/></svg>
+          ${state.photos&&state.photos[b.id]?"Schimbă poza":"Pune o poză"}</button></div>
+      <div class="meta" style="margin-bottom:14px">${tagsHTML(b)}</div>
+      <p class="lede">${gloss(esc(b.lede))}</p></div>
+    ${tl?`<div class="sec"><h3>Cum decurge</h3><ul class="tl">${tl}</ul></div>`:""}
+    ${b.weather?`<div class="sec"><h3>Pe ce vreme</h3>${b.weather.map(w=>
+        `<div class="note ${w.k==="bad"?"warn":"tip"}" style="margin-top:0;margin-bottom:10px">
+          <b>${w.k==="bad"?"Evită când":"Merge bine când"}:</b> ${gloss(w.t)}</div>`).join("")}</div>`:""}
+    ${b.permit?`<div class="sec"><h3>Permis</h3>
+      <div class="note ${b.permit.need?"warn":"tip"}" style="margin-top:0">
+        <b>${b.permit.need?"Ai nevoie de":"Nu ai nevoie de permis"}:</b> ${esc(b.permit.name)}</div>
+      <div style="font-size:.85em;color:var(--ink2);line-height:1.65;margin-top:12px">${b.permit.what}</div>
+      ${b.permit.how?`<div style="font-size:.85em;color:var(--ink2);line-height:1.65;margin-top:10px"><b>Unde:</b> ${b.permit.how}</div>`:""}
+      ${b.permit.when?`<div style="font-size:.85em;color:var(--ink2);line-height:1.65;margin-top:10px"><b>Când:</b> ${b.permit.when}</div>`:""}
+      ${b.permit.cost?`<div style="font-size:.85em;color:var(--ink2);line-height:1.65;margin-top:10px"><b>Cost:</b> ${b.permit.cost}</div>`:""}
+      ${b.permit.extra?`<div class="note tip">${b.permit.extra}</div>`:""}</div>`:""}
+    ${b.notes?`<div class="sec"><h3>De știut</h3>${notesHTML(b.notes)}</div>`:""}
+    ${cb?`<div class="sec"><h3>Se combină bine cu</h3>${cb}</div>`:""}
+    ${mini}
+    ${b.custom?`<div class="sec"><button class="addb" data-edit="${b.id}" style="margin-top:0">
+      <svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M14 6l4 4"/></svg>
+      Editează activitatea</button></div>`:""}
+    <div class="sec"><h3>Planificare</h3>
+      ${d!==undefined?`<div class="note tip" style="margin-top:0"><b>Pusă în ziua ${+d+1}.</b></div>
+        <button class="addb on" data-rm="${b.id}">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Scoate din ziua ${+d+1}</button>`
+        : dayBtns}
+      <button class="ck" style="justify-content:center;border-bottom:0;padding-top:16px"
+        data-done="${b.id}" aria-pressed="${!!state.done[b.id]}">
+        <span class="bx"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>
+        <span class="lb" style="flex:none;font-weight:500">${state.done[b.id]?"Făcut":"Marchează ca făcut"}</span>
+      </button></div>`;
+}
+
+function screenData(){
+  const n=Object.values(state.days).flat().length;
+  const nc=(state.custom||[]).length;
+  const np=Object.keys(state.photos||{}).length;
+  const nb=Object.values(state.checks).filter(Boolean).length;
+  return `${backBar()}
+    <div class="hero"><h1>💾 Datele mele</h1>
+      <p class="lede">Tot ce ai salvat stă pe telefonul tău. Fă o copie din când în când —
+      e singura plasă de siguranță dacă schimbi telefonul sau ștergi datele browserului.</p></div>
+    <div class="sec"><h3>Ce ai acum</h3>
+      <div class="tblw"><table class="tbl"><tbody>
+        <tr><td>Activități planificate</td><td><b>${n}</b></td></tr>
+        <tr><td>Activități adăugate de tine</td><td><b>${nc}</b></td></tr>
+        <tr><td>Poze proprii</td><td><b>${np}</b></td></tr>
+        <tr><td>Bife în checklist-uri</td><td><b>${nb}</b></td></tr>
+      </tbody></table></div></div>
+    <div class="sec"><h3>Copie de siguranță</h3>
+      <button class="addb" id="expBtn" style="margin-top:0">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 19h16"/></svg>
+        Salvează tot într-un fișier</button>
+      <button class="addb" id="impBtn">
+        <svg viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4M4 19h16"/></svg>
+        Încarcă dintr-un fișier</button>
+      <div class="hint">Fișierul conține planul, bifele, activitățile tale și pozele.
+      Îl poți trimite pe alt telefon sau păstra în Drive.</div></div>
+    <div class="sec"><h3>Șterge tot</h3>
+      <button class="addb" id="wipeBtn" style="margin-top:0;background:var(--a4bg);color:var(--a4)">
+        <svg viewBox="0 0 24 24"><path d="M5 7h14M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+        Golește toate datele</button>
+      <div class="hint">Activitățile și informațiile din ghid rămân. Se șterge doar ce ai adăugat tu.</div></div>`;
+}
+
+function screenGlossary(){
+  const list=GUIDE.glossary.slice().sort((a,b)=>a.t.localeCompare(b.t,"ro"));
+  return `${backBar()}
+    <div class="hero"><h1>🗒️ Glosar</h1>
+      <p class="lede">Termenii spanioli și canarieni care apar în ghid. Îi poți apăsa
+      și direct în text, oriunde sunt subliniați.</p></div>
+    ${list.map(g=>`<div class="sec"><h3>${esc(g.t)}</h3>
+      <div style="font-size:.85em;color:var(--ink2);line-height:1.65">${g.d}</div></div>`).join("")}`;
+}
+
+function screenPage(id){
+  if(id==="__glossary") return screenGlossary();
+  if(id==="__data") return screenData();
+  const p=GUIDE.pages.find(x=>x.id===id); if(!p) return screenExplore();
+  return `${backBar()}
+    <div class="hero"><h1>${p.em} ${esc(p.name)}</h1><p class="lede">${esc(p.lede)}</p></div>
+    ${p.sections.map((s,i)=>{let x="";
+      if(s.body) x+=`<div>${gloss(s.body)}</div>`;
+      if(s.table) x+=tableHTML(s.table);
+      if(s.checklist) x+=checklistHTML(p.id,i,s.checklist);
+      if(s.notes) x+=notesHTML(s.notes);
+      return `<div class="sec"><h3>${esc(s.h)}</h3>${x}</div>`;}).join("")}`;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   ACTIVITĂȚI PROPRII — adăugate din aplicație
+   ════════════════════════════════════════════════════════════ */
+
+/* Scoate coordonatele dintr-un link de Google Maps sau dintr-un text „lat,lng". */
+function parseCoord(s){
+  if(!s) return null;
+  s=s.trim();
+  const pats=[
+    /@(-?\d+\.\d+),(-?\d+\.\d+)/,              // .../@28.41,-16.54,15z
+    /[?&]q=(-?\d+\.\d+),\s*(-?\d+\.\d+)/,      // ...?q=28.41,-16.54
+    /!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/,          // ...!3d28.41!4d-16.54
+    /^(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)$/        // lipit direct
+  ];
+  for(const p of pats){
+    const m=s.match(p);
+    if(m){
+      const la=+m[1], ln=+m[2];
+      if(la>=-90&&la<=90&&ln>=-180&&ln<=180) return la.toFixed(5)+","+ln.toFixed(5);
+    }
+  }
+  return null;
+}
+
+const CUSTOM_SCENES=["coast","forest","volcano","town","sea","beach","night"];
+
+function screenEditor(id){
+  const ed = id ? B(id) : null;
+  /* `form` ține ce a scris utilizatorul; fără el s-ar pierde la fiecare re-randare. */
+  if(!form) formInit(id);
+  const v = form;
+  const durOpts=["1–2 ore","Jumătate de zi","Zi întreagă","Seara"];
+  return `${backBar()}
+    <div class="hero"><h1>${ed?"Editează activitatea":"Activitate nouă"}</h1>
+      <p class="lede">${ed?"Modifică ce vrei și salvează.":"Completează ce știi. Doar numele e obligatoriu — restul îl poți adăuga mai târziu."}</p></div>
+
+    <div class="sec"><h3>Numele</h3>
+      <input class="fld" id="f_name" type="text" placeholder="ex: Piscinele din Bajamar" value="${esc(v.name)}"></div>
+
+    <div class="sec"><h3>Pe scurt</h3>
+      <textarea class="fld ta" id="f_blurb" rows="2"
+        placeholder="Un rând care apare pe card">${esc(v.blurb)}</textarea></div>
+
+    <div class="sec"><h3>Descriere</h3>
+      <textarea class="fld ta" id="f_lede" rows="4"
+        placeholder="Ce e, de ce merită, ce trebuie știut">${esc(v.lede)}</textarea></div>
+
+    <div class="sec"><h3>Cât durează</h3>
+      <div class="chips" id="f_dur">${durOpts.map(d=>
+        `<button class="chip${v.dur===d?" on":""}" data-set="dur" data-val="${esc(d)}">${esc(d)}</button>`).join("")}</div></div>
+
+    <div class="sec"><h3>Ai nevoie de mașină?</h3>
+      <div class="chips" id="f_car">
+        <button class="chip${v.car?" on":""}" data-set="car" data-val="1">Da</button>
+        <button class="chip${!v.car?" on":""}" data-set="car" data-val="0">Nu</button></div></div>
+
+    <div class="sec"><h3>Categoria</h3>
+      <div class="chips" id="f_cat">${GUIDE.cats.map(c=>
+        `<button class="chip${v.cat===c.id?" on":""}" data-set="cat" data-val="${c.id}">${esc(c.name)}</button>`).join("")}</div></div>
+
+    <div class="sec"><h3>Unde e</h3>
+      <input class="fld" id="f_coord" type="text"
+        placeholder="Lipește un link de Google Maps" value="${esc(v.coordRaw!==undefined?v.coordRaw:(v.coord||""))}">
+      <div class="hint" id="coordHint">Deschizi locul în Google Maps → Share → Copy link. Sau scrii direct <code>28.41,-16.54</code>.</div></div>
+
+    <div class="sec"><h3>Note</h3>
+      <div id="noteList">${(v.notes||[]).map((n,i)=>
+        `<div class="note ${n.k==="warn"?"warn":"tip"}" style="display:flex;gap:10px;align-items:flex-start">
+          <span style="flex:1"><b>${n.k==="warn"?"Atenție":"Pont"}:</b> ${esc(n.t)}</span>
+          <button data-delnote="${i}" aria-label="Șterge nota"
+            style="color:var(--ink3);font-size:1.2em;line-height:1;padding:0 4px">×</button></div>`).join("")}</div>
+      <div class="chips" style="margin-top:10px">
+        <button class="chip" data-addnote="tip">+ Pont</button>
+        <button class="chip" data-addnote="warn">+ Atenție</button></div></div>
+
+    <div class="sec"><h3>Ilustrație</h3>
+      <div class="chips">${CUSTOM_SCENES.map(s=>
+        `<button class="chip${v.scene===s?" on":""}" data-set="scene" data-val="${s}">${
+          ({coast:"Coastă",forest:"Pădure",volcano:"Vulcan",town:"Oraș",sea:"Mare",beach:"Plajă",night:"Noapte"})[s]
+        }</button>`).join("")}</div>
+      <div class="hint">Poți pune o poză proprie după ce salvezi.</div></div>
+
+    <div class="sec">
+      <button class="addb" id="saveAct" style="margin-top:0">
+        <svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+        ${ed?"Salvează modificările":"Adaugă activitatea"}</button>
+      ${ed?`<button class="addb" id="delAct"
+        style="background:var(--a4bg);color:var(--a4)">
+        <svg viewBox="0 0 24 24"><path d="M5 7h14M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+        Șterge activitatea</button>`:""}</div>`;
+}
+
+/* starea formularului, ținută separat ca să nu se piardă la re-render */
+let form=null;
+function formInit(id){
+  const ed=id?B(id):null;
+  form = ed ? JSON.parse(JSON.stringify(ed))
+            : {id:"c_"+Date.now().toString(36), name:"",blurb:"",lede:"",
+               dur:"Jumătate de zi",car:false,cat:"nature",scene:"coast",coord:"",
+               notes:[], weather:[], custom:true};
+  form.custom=true;
+}
+function formRead(){
+  const g=i=>{const el=document.getElementById(i); return el?el.value.trim():"";};
+  form.name=g("f_name"); form.blurb=g("f_blurb"); form.lede=g("f_lede");
+  const c=parseCoord(g("f_coord"));
+  form.coordRaw=g("f_coord");
+  form.coord=c||"";
+  if(c) form.mapq="";
+}
+function formSave(){
+  formRead();
+  if(!form.name){ alert("Dă-i un nume activității."); return; }
+  if(form.coordRaw && !form.coord){
+    if(!confirm("N-am găsit coordonate în ce ai lipit. Salvez oricum, fără poziție pe hartă?")) return;
+  }
+  form.short = form.name.length>18 ? form.name.slice(0,17)+"…" : form.name;
+  form.blurb = form.blurb || "Activitate adăugată de tine.";
+  form.lede  = form.lede  || form.blurb;
+  form.hours = "";
+  form.fit   = {sun:3,partly:3,cloud:2,rain:1};
+  form.combos= [];
+  delete form.coordRaw;
+  state.custom = state.custom || [];
+  const i = state.custom.findIndex(x=>x.id===form.id);
+  if(i>=0) state.custom[i]=form; else state.custom.push(form);
+  save();
+  view.detail="block:"+form.id; form=null;
+  render();
+}
+
+/* Zoom și deplasare pe hartă: pinch cu două degete, tragere cu unul, plus butoane. */
+let mapZ = {s:1, x:0, y:0};
+function mapApply(){
+  const svg=document.getElementById("mapsvg"); if(!svg) return;
+  const vp=document.getElementById("vp");
+  const w=vp.clientWidth, h=vp.clientHeight;
+  mapZ.s=Math.min(5,Math.max(1,mapZ.s));
+  const maxX=w*(mapZ.s-1), maxY=h*(mapZ.s-1);
+  mapZ.x=Math.min(0,Math.max(-maxX,mapZ.x));
+  mapZ.y=Math.min(0,Math.max(-maxY,mapZ.y));
+  svg.style.transform=`translate(${mapZ.x}px,${mapZ.y}px) scale(${mapZ.s})`;
+  const l=document.getElementById("zlvl"); if(l) l.textContent=mapZ.s.toFixed(1)+"×";
+}
+function mapInit(){
+  const vp=document.getElementById("vp"); if(!vp) return;
+  let pts=new Map(), lastD=0, lastC=null, moved=false;
+  const mid=()=>{const a=[...pts.values()];
+    return {x:(a[0].x+a[1].x)/2, y:(a[0].y+a[1].y)/2};};
+  const dist=()=>{const a=[...pts.values()];
+    return Math.hypot(a[0].x-a[1].x, a[0].y-a[1].y);};
+  vp.addEventListener("pointerdown",e=>{
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pts.size===2){lastD=dist();lastC=mid();}
+    moved=false; vp.setPointerCapture(e.pointerId);
+  });
+  vp.addEventListener("pointermove",e=>{
+    if(!pts.has(e.pointerId)) return;
+    const prev=pts.get(e.pointerId);
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pts.size===1 && mapZ.s>1){
+      mapZ.x+=e.clientX-prev.x; mapZ.y+=e.clientY-prev.y;
+      moved=true; mapApply(); e.preventDefault();
+    } else if(pts.size===2){
+      const d=dist(), c=mid(), r=vp.getBoundingClientRect();
+      const k=d/(lastD||d);
+      const cx=c.x-r.left, cy=c.y-r.top;
+      mapZ.x = cx-(cx-mapZ.x)*k + (c.x-lastC.x);
+      mapZ.y = cy-(cy-mapZ.y)*k + (c.y-lastC.y);
+      mapZ.s*=k; lastD=d; lastC=c; moved=true; mapApply(); e.preventDefault();
+    }
+  });
+  const up=e=>{pts.delete(e.pointerId); if(pts.size<2){lastD=0;lastC=null;}};
+  vp.addEventListener("pointerup",up); vp.addEventListener("pointercancel",up);
+  vp.addEventListener("click",e=>{ if(moved){e.stopPropagation();e.preventDefault();moved=false;} },true);
+  mapApply();
+}
+
+function render(keep){
+  const y=window.scrollY;
+  let html;
+  if(view.detail==="new") html=screenEditor(null);
+  else if(view.detail && view.detail.startsWith("edit:")) html=screenEditor(view.detail.slice(5));
+  else if(view.detail && view.detail.startsWith("block:")) html=screenBlock(view.detail.slice(6));
+  else if(view.detail && view.detail.startsWith("page:")) html=screenPage(view.detail.slice(5));
+  else if(view.day!==null) html=screenDay(view.day);
+  else if(view.cat) html=screenCat(view.cat);
+  else html=({plan:screenPlan,explore:screenExplore,map:screenMap,
+              links:screenLinks,search:screenSearch}[view.tab])();
+  app.innerHTML=html;
+  const top = !view.detail && !view.cat && view.day===null;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",String(top && t.dataset.tab===view.tab)));
+  document.getElementById("hSub").textContent = top ? GUIDE.subtitle : "";
+  if(document.getElementById("vp")) mapInit();
+  const eb=document.getElementById("expBtn"); if(eb) eb.addEventListener("click",exportData);
+  const ib=document.getElementById("impBtn");
+  if(ib) ib.addEventListener("click",()=>document.getElementById("importIn").click());
+  const wb=document.getElementById("wipeBtn");
+  if(wb) wb.addEventListener("click",()=>{
+    if(!confirm("Ștergi tot ce ai salvat? Planul, bifele, activitățile tale și pozele.")) return;
+    if(!confirm("Sigur? Nu se poate anula.")) return;
+    state={days:{},dates:{},done:{},checks:{},theme:state.theme,photos:{},custom:[]};
+    save(); hist=[]; view.detail=null; render();
+  });
+  const sv=document.getElementById("saveAct");
+  if(sv) sv.addEventListener("click",formSave);
+  const dl=document.getElementById("delAct");
+  if(dl) dl.addEventListener("click",()=>{
+    if(!confirm("Ștergi activitatea „"+form.name+"”?")) return;
+    state.custom=(state.custom||[]).filter(x=>x.id!==form.id);
+    Object.keys(state.days).forEach(k=>{state.days[k]=state.days[k].filter(x=>x!==form.id);});
+    delete state.done[form.id]; if(state.photos) delete state.photos[form.id];
+    save(); form=null; hist=[]; view.detail=null; view.cat="__all"; render();
+  });
+  const ci=document.getElementById("f_coord");
+  if(ci) ci.addEventListener("input",()=>{
+    const h=document.getElementById("coordHint");
+    const c=parseCoord(ci.value);
+    h.innerHTML = ci.value.trim()
+      ? (c?`✓ Poziție găsită: <code>${c}</code>`:"Nu găsesc coordonate aici. Încearcă linkul complet din Google Maps.")
+      : "Deschizi locul în Google Maps → Share → Copy link. Sau scrii direct <code>28.41,-16.54</code>.";
+    h.style.color = ci.value.trim()&&!c ? "var(--a4)" : "";
+  });
+  const dt=document.getElementById("dt");
+  if(dt) dt.addEventListener("change",e=>{
+    state.dates[+e.target.dataset.dayidx]=e.target.value.trim(); save(); });
+  if(view.tab==="search" && top){
+    const i=document.getElementById("q");
+    i.addEventListener("input",e=>{view.query=e.target.value;render(true);});
+    if(document.activeElement!==i && view.query){i.focus();i.setSelectionRange(99,99);}
+  }
+  window.scrollTo(0, keep?y:0);
+}
+
+document.addEventListener("click",e=>{
+  if(e.target.closest("a")) return;
+  const t=e.target.closest("[data-day],[data-open],[data-done],[data-page],[data-back],[data-goto],[data-check],[data-cat],[data-pin],[data-add],[data-rm],[data-gloss],[data-photo],[data-zoom],[data-closesheet],[data-new],[data-edit],[data-set],[data-addnote],[data-delnote],.tab");
+  if(!t) return;
+  const d=t.dataset;
+
+  if(d.closesheet!==undefined){ return closeSheet(); }
+  if(d.new!==undefined){ formInit(null); return go(()=>{view.detail="new";}); }
+  if(d.edit!==undefined){ formInit(d.edit); return go(()=>{view.detail="edit:"+d.edit;}); }
+  if(d.set!==undefined){
+    formRead();
+    if(d.set==="car") form.car = d.val==="1"; else form[d.set]=d.val;
+    return render(true);
+  }
+  if(d.addnote!==undefined){
+    formRead();
+    const t=prompt(d.addnote==="warn"?"Ce trebuie evitat sau știut?":"Care e pontul?");
+    if(t && t.trim()){ form.notes=form.notes||[]; form.notes.push({k:d.addnote,t:t.trim()}); }
+    return render(true);
+  }
+  if(d.delnote!==undefined){ formRead(); form.notes.splice(+d.delnote,1); return render(true); }
+  if(d.gloss!==undefined){ return openSheet(+d.gloss); }
+  if(d.zoom!==undefined){
+    const v=+d.zoom;
+    if(v===0){ mapZ={s:1,x:0,y:0}; }
+    else {
+      const vp=document.getElementById("vp");
+      const cx=vp.clientWidth/2, cy=vp.clientHeight/2;
+      const k = v>0 ? 1.5 : 1/1.5;
+      mapZ.x = cx-(cx-mapZ.x)*k; mapZ.y = cy-(cy-mapZ.y)*k; mapZ.s*=k;
+    }
+    return mapApply();
+  }
+  if(d.photo!==undefined){ pendingPhoto=d.photo;
+    document.getElementById("photoIn").click(); return; }
+
+  if(d.add!==undefined){
+    const to=+d.to, prev=dayOf(d.add);
+    if(prev!==undefined) state.days[prev]=state.days[prev].filter(x=>x!==d.add);
+    (state.days[to]=state.days[to]||[]).push(d.add);
+    save(); return render(true);
+  }
+  if(d.rm!==undefined){
+    const p=dayOf(d.rm);
+    if(p!==undefined) state.days[p]=state.days[p].filter(x=>x!==d.rm);
+    save(); return render(true);
+  }
+  if(d.done!==undefined){ state.done[d.done]=!state.done[d.done]; save(); return render(true); }
+  if(d.check){ state.checks[d.check]=!state.checks[d.check]; save(); return render(true); }
+  if(d.back){ return back(); }
+
+  if(d.pin){ if(view.mapSel===d.pin) return go(()=>{view.detail="block:"+d.pin;});
+             view.mapSel=d.pin; return render(true); }
+  if(d.day!==undefined) return go(()=>{view.day=+d.day;});
+  if(d.cat) return go(()=>{view.cat=d.cat;});
+  if(d.open) return go(()=>{view.detail="block:"+d.open;});
+  if(d.page) return go(()=>{view.detail="page:"+d.page;});
+  if(d.goto) return go(()=>{
+    if(d.goto.startsWith("tab:")){view.detail=null;view.cat=null;view.day=null;view.tab=d.goto.slice(4);}
+    else if(d.goto.startsWith("cat:")){view.detail=null;view.cat=d.goto.slice(4);}
+    else view.detail=d.goto;
+  });
+  if(t.classList.contains("tab")){
+    hist=[]; view.detail=null;view.cat=null;view.day=null;view.tab=d.tab; return render();
+  }
+});
+
+/* ── glosar ── */
+const sheet=document.getElementById("sheet");
+function openSheet(i){
+  const g=GUIDE.glossary[i]; if(!g) return;
+  document.getElementById("shT").textContent=g.t;
+  document.getElementById("shD").innerHTML=g.d;
+  sheet.classList.add("on"); document.body.style.overflow="hidden";
+}
+function closeSheet(){ sheet.classList.remove("on"); document.body.style.overflow=""; }
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeSheet(); });
+
+/* ── export și import: plasa de siguranță pentru datele tale ── */
+function exportData(){
+  const blob=new Blob([JSON.stringify({v:6,when:new Date().toISOString(),state},null,1)],
+    {type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="ghid-"+GUIDE.destination.toLowerCase()+"-"+
+    new Date().toISOString().slice(0,10)+".json";
+  a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+document.getElementById("importIn").addEventListener("change",async e=>{
+  const f=e.target.files&&e.target.files[0]; if(!f) return;
+  e.target.value="";
+  try{
+    const d=JSON.parse(await f.text());
+    if(!d.state) throw 0;
+    const n=(d.state.custom||[]).length;
+    if(!confirm("Înlocuiesc tot ce ai acum cu datele din fișier?\n\n"+
+      Object.values(d.state.days||{}).flat().length+" activități planificate, "+
+      n+" activități proprii, "+
+      Object.keys(d.state.photos||{}).length+" poze.")) return;
+    state=Object.assign({days:{},dates:{},done:{},checks:{},theme:null,photos:{},custom:[]},d.state);
+    save(); applyTheme(); hist=[]; view.detail=null; view.cat=null; view.day=null;
+    render(); alert("Gata, datele au fost încărcate.");
+  }catch(err){ alert("Fișierul nu pare valid."); }
+});
+
+/* ── poze: redimensionate înainte de salvare, ca să nu umple stocarea ── */
+let pendingPhoto=null;
+document.getElementById("photoIn").addEventListener("change",async e=>{
+  const f=e.target.files&&e.target.files[0]; if(!f||!pendingPhoto) return;
+  const id=pendingPhoto; pendingPhoto=null; e.target.value="";
+  try{
+    const url=URL.createObjectURL(f);
+    const img=await new Promise((res,rej)=>{const i=new Image();
+      i.onload=()=>res(i); i.onerror=rej; i.src=url;});
+    const MAXW=900;
+    const sc=Math.min(1,MAXW/img.naturalWidth);
+    const w=Math.round(img.naturalWidth*sc), h=Math.round(img.naturalHeight*sc);
+    const cv=document.createElement("canvas"); cv.width=w; cv.height=h;
+    cv.getContext("2d").drawImage(img,0,0,w,h);
+    URL.revokeObjectURL(url);
+    state.photos=state.photos||{};
+    state.photos[id]=cv.toDataURL("image/jpeg",0.72);
+    save(); render(true);
+  }catch(err){ alert("Nu am putut încărca poza. Încearcă alta."); }
+});
+
+document.getElementById("btnSearch").addEventListener("click",()=>{
+  view.detail=null;view.cat=null;view.day=null;view.tab="search";render();
+  setTimeout(()=>{const i=document.getElementById("q");if(i)i.focus();},40);
+});
+document.getElementById("btnTheme").addEventListener("click",()=>{
+  const dark=state.theme==="dark"||(!state.theme&&matchMedia("(prefers-color-scheme:dark)").matches);
+  state.theme=dark?"light":"dark"; applyTheme(); save(); render(true);
+});
+
+/* Înregistrează service worker-ul. Doar pe https sau localhost —
+   dacă fișierul e deschis local, aplicația merge la fel, doar fără instalare. */
+if("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load",()=>{
+    navigator.serviceWorker.register("sw.js").catch(()=>{});
+  });
+}
+
+(async()=>{ await load(); applyTheme();
+  document.getElementById("hTitle").childNodes[0].nodeValue=GUIDE.destination;
+  render(); })();
+</script>
+</body>
+</html>
