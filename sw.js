@@ -2,7 +2,7 @@
    La fiecare versiune nouă a ghidului, schimbă VERSION mai jos.
    Datele salvate de utilizator NU se ating: stau în localStorage, nu în cache. */
 
-const VERSION = "ghid-tenerife-v6";
+const VERSION = "ghid-tenerife-v6-1";
 const ASSETS = [
   "./",
   "./index.html",

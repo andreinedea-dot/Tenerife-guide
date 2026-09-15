@@ -16,6 +16,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+:root{
+  --sat:env(safe-area-inset-top,0px);
+  --sab:env(safe-area-inset-bottom,0px);
+  --hbar:58px;
+}
 :root,[data-theme="light"]{
   --ink:#10222B; --ink2:#3A4F59; --ink3:#6C8089;
   --paper:#EDF3F5; --surf:#FFFFFF; --surf2:#DFEAEE;
@@ -53,7 +58,7 @@
 html{background:var(--paper)}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.75;
-  padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased}
+  padding-bottom:calc(84px + var(--sab));-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:"Bricolage Grotesque","Inter",sans-serif;font-weight:800;
   letter-spacing:-.02em;line-height:1.16;margin:0;color:var(--ink)}
 h1{font-size:1.5em}h2{font-size:1.16em}h3{font-size:1.02em;font-weight:600}
@@ -63,8 +68,9 @@ button{font-family:inherit;font-size:inherit;color:var(--ink);border:0;backgroun
 :focus-visible{outline:2.5px solid var(--a1);outline-offset:2px;border-radius:6px}
 .wrap{max-width:580px;margin:0 auto;padding:0 16px}
 
-header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
-.hbar{display:flex;align-items:center;gap:9px;height:58px}
+header{position:sticky;top:0;z-index:40;background:var(--paper);
+  border-bottom:1px solid var(--line);padding-top:var(--sat)}
+.hbar{display:flex;align-items:center;gap:9px;height:var(--hbar)}
 .hbar .ttl{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;
   letter-spacing:-.02em;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hbar .sub{font-size:12px;color:var(--ink3);font-weight:400;font-family:"Inter",sans-serif;
@@ -195,7 +201,7 @@ header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1p
 .sheet.on{display:block}
 .sheet .bg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
 .sheet .pan{position:absolute;left:0;right:0;bottom:0;background:var(--surf);
-  border-radius:20px 20px 0 0;padding:22px 20px calc(26px + env(safe-area-inset-bottom,0px));
+  border-radius:20px 20px 0 0;padding:22px 20px calc(26px + var(--sab));
   max-height:72vh;overflow-y:auto;border-top:1px solid var(--line);
   max-width:580px;margin:0 auto}
 .sheet .gr{width:38px;height:4px;border-radius:2px;background:var(--line2);margin:0 auto 16px}
@@ -272,7 +278,7 @@ circle.h.sel{fill:var(--a4)}
 .hit2 mark{background:var(--a3bg);color:var(--a3);padding:0 2px;border-radius:3px}
 
 nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surf);
-  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  border-top:1px solid var(--line);padding-bottom:var(--sab)}
 .tabsin{max-width:580px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
 .tab{padding:11px 2px 12px;display:flex;flex-direction:column;align-items:center;gap:4px}
 .tab svg{width:22px;height:22px;stroke:var(--ink3);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
@@ -280,7 +286,7 @@ nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surf
 .tab[aria-selected="true"] svg{stroke:var(--a1)}
 .tab[aria-selected="true"] .lb{color:var(--a1);font-weight:600}
 
-.backbar{position:sticky;top:58px;z-index:35;background:var(--paper);margin:0 -16px;padding:0 16px;
+.backbar{position:sticky;top:calc(var(--hbar) + var(--sat));z-index:35;background:var(--paper);margin:0 -16px;padding:0 16px;
   border-bottom:1px solid var(--line)}
 .back{display:inline-flex;align-items:center;gap:7px;font-size:.82em;color:var(--ink2);
   padding:13px 12px 13px 0;font-weight:500}
